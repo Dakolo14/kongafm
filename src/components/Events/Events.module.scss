@@ -1,0 +1,246 @@
+.eventsSection {
+  padding: 60px 0 40px 0;
+  background-color: #26010f; // Consistent dark bg
+
+  @media (max-width: 768px) {
+    padding: 40px 0;
+  }
+}
+
+// 1. Header Styles (Consistent)
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+  padding: 0;
+}
+
+.title {
+  font-size: 32px;
+  font-weight: 600;
+  color: #fff;
+  margin: 0;
+  letter-spacing: 0.3px;
+
+  @media (max-width: 768px) {
+    font-size: 20px;
+  }
+}
+
+.viewAll {
+  font-size: 16px;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  padding: 8px 16px;
+  border-radius: 6px;
+  display: inline-block;
+
+  &:hover {
+    color: #ed017f;
+    background-color: rgba(237, 1, 127, 0.1);
+  }
+
+  @media (max-width: 480px) {
+    font-size: 13px;
+    padding: 6px 10px;
+  }
+}
+
+// 2. Grid / Slider Container
+.container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); // Desktop: 3 Larger cards for events
+  gap: 32px;
+  padding: 18px 12px; // Matching padding
+
+  // Mobile: Vertical Stack
+  @media (max-width: 1024px) {
+    grid-template-columns: 1fr;
+    gap: 24px;
+    padding: 10px 16px;
+  }
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+  color: inherit;
+  transition: transform 0.2s ease;
+  position: relative;
+
+  @media (max-width: 1024px) {
+    // Stacked layout inherits defaults
+  }
+
+  &:hover {
+    transform: translateY(-4px);
+
+    .statusBadge {
+      background-color: #fff;
+      color: #ed017f;
+    }
+  }
+}
+
+.imageWrapper {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9; // Cinematic landscape for events
+  border-radius: 12px;
+  overflow: hidden;
+  background-color: #1a0a10;
+  margin-bottom: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+
+  // Slight zoom on hover
+  .card:hover & {
+    transform: scale(1.05);
+  }
+}
+
+// Left Pink Date Strip (The Reference Design Feature)
+.dateStrip {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 25%; // Proportional width
+  max-width: 80px;
+  background: linear-gradient(180deg, #ed017f 0%, #b0005e 100%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+  padding: 10px 4px;
+  text-align: center;
+  color: #fff;
+  box-shadow: 2px 0 10px rgba(0, 0, 0, 0.3);
+
+  // Decorative Texture lines or similar could go here
+  &::before {
+    content: "";
+    position: absolute;
+    top: 10px;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: rgba(255, 255, 255, 0.2);
+  }
+}
+
+.dateMonth {
+  font-size: 14px;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-bottom: 2px;
+  letter-spacing: 1px;
+  line-height: 1;
+}
+
+.dateDay {
+  font-size: 32px;
+  font-weight: 800;
+  line-height: 1;
+  margin-bottom: 12px;
+}
+
+.liveIndicator {
+  margin-top: auto; // Push to bottom
+  background: rgba(0, 0, 0, 0.2);
+  padding: 4px 6px;
+  border-radius: 4px;
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.liveDot {
+  width: 8px;
+  height: 8px;
+  background-color: #ff0000;
+  border-radius: 50%;
+  margin-bottom: 4px;
+  box-shadow: 0 0 4px rgba(255, 0, 0, 0.5);
+  animation: pulse 1.5s infinite;
+}
+
+.timeText {
+  font-size: 10px;
+  font-weight: 600;
+}
+
+.statusBadge {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  background-color: #ed017f;
+  color: #fff;
+  font-size: 11px;
+  font-weight: 700;
+  padding: 6px 12px;
+  border-radius: 20px;
+  text-transform: uppercase;
+  z-index: 2;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+  transition: all 0.3s ease;
+
+  &.upcoming {
+    background-color: rgba(255, 255, 255, 0.9);
+    color: #26010f;
+  }
+
+  &.live {
+    background-color: #ff0000;
+    animation: pulse 2s infinite;
+  }
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding-left: 4px;
+}
+
+.eventTitle {
+  font-size: 24px;
+  font-weight: 700;
+  color: #fff;
+  margin: 0;
+  line-height: 1.3;
+}
+
+.eventTime {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 16px;
+  color: rgba(255, 255, 255, 0.6);
+  margin: 0;
+  font-weight: 500;
+}
+
+@keyframes pulse {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.7;
+  }
+  100% {
+    opacity: 1;
+  }
+}

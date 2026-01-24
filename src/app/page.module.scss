@@ -1,0 +1,23 @@
+.homePage {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  background-color: #26010f;
+  margin: 0;
+  padding: 0;
+
+  > section {
+    padding-left: 40px;
+    padding-right: 40px;
+
+    @media (min-width: 1441px) {
+      padding-left: 100px;
+      padding-right: 100px;
+    }
+
+    @media (max-width: 1024px) {
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+  }
+}
