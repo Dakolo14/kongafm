@@ -1,21 +1,12 @@
 "use client";
 
 import React from "react";
+import { ProductItem } from "@/types/components";
 import styles from "./ProductShowcase.module.scss";
-
-// 4. Data Interface: Define the props interface strictly
-export interface ProductVideo {
-  id: string;
-  thumbnailUrl: string;
-  duration: string; // e.g., "0:23"
-  title: string;
-  description: string;
-  link: string;
-}
 
 export interface ProductShowcaseProps {
   title: string; // "Product Showcase Videos"
-  videos: ProductVideo[];
+  videos: ProductItem[];
   viewAllLink?: string;
 }
 
@@ -41,7 +32,7 @@ const ProductShowcase: React.FC<ProductShowcaseProps> = ({
         {videos.map((video) => (
           <a
             key={video.id}
-            href={video.link}
+            href={video.link || "#"}
             className={styles.card}
             aria-label={`Watch ${video.title}`}
           >
@@ -52,7 +43,9 @@ const ProductShowcase: React.FC<ProductShowcaseProps> = ({
                 className={styles.thumbnail}
               />
               {/* Time Badge overlaid in bottom-right */}
-              <div className={styles.timeBadge}>{video.duration}</div>
+              {video.duration && (
+                <div className={styles.timeBadge}>{video.duration}</div>
+              )}
 
               {/* Optional: Play icon overlay for better UX indicating video */}
               <div className={styles.playOverlay}>
