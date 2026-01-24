@@ -7,7 +7,7 @@ import styles from "./TrendingNews.module.scss";
 
 interface TrendingNewsProps {
   title?: string;
-  article: NewsItem;
+  article: NewsItem & { fullContent?: string };
 }
 
 const TrendingNews: React.FC<TrendingNewsProps> = ({ title, article }) => {
