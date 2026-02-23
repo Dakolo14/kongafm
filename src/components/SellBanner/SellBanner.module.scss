@@ -1,0 +1,42 @@
+.sellBanner {
+  width: 100%;
+  background-color: #26010f;
+  padding: 40px 0;
+
+  @media (max-width: 768px) {
+    padding: 24px 0;
+  }
+}
+
+.bannerLink {
+  display: block;
+  width: 100%;
+  text-decoration: none;
+  overflow: hidden;
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+
+  &:hover {
+    transform: scale(1.02);
+  }
+
+  @media (max-width: 768px) {
+    border-radius: 6px;
+  }
+}
+
+.bannerImage {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+  aspect-ratio: 16 / 4;
+
+  @media (max-width: 1024px) {
+    aspect-ratio: 4 / 2;
+  }
+
+  @media (max-width: 768px) {
+    aspect-ratio: 2 / 1;
+  }
+}

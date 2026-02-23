@@ -3,14 +3,18 @@
 import Link from "next/link";
 import Image from "next/image";
 import { useState } from "react";
+import { usePathname } from "next/navigation";
+import { useFMPlayer } from "@/context/FMPlayerContext";
 import styles from "./Header.module.scss";
 
 export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
+  const pathname = usePathname();
+  const { isPlaying, setIsPlaying } = useFMPlayer();
 
   // Helper for Nav Items to keep DRY
   const navItems = [
-    { label: "Home", href: "/", active: true },
+    { label: "Home", href: "/" },
     { label: "About Us", href: "/about" },
     { label: "Live TV", href: "/live-tv" },
     { label: "FM", href: "/fm" },
@@ -20,6 +24,13 @@ export default function Header() {
     { label: "Podcasts", href: "/podcasts" },
     { label: "Contact", href: "/contact" },
   ];
+
+  const isActive = (href: string) => {
+    if (href === "/") {
+      return pathname === "/";
+    }
+    return pathname.startsWith(href);
+  };
 
   return (
     <header className={styles.header}>
@@ -50,7 +61,13 @@ export default function Header() {
               <div className={styles.tuneInLabel}>TUNE IN NOW!</div>
               <div className={styles.stationName}>Konga FM 103.7</div>
             </div>
-            <button className={styles.playButton}>▶</button>
+            <button 
+              className={styles.playButton}
+              onClick={() => setIsPlaying(!isPlaying)}
+              aria-label={isPlaying ? "Pause" : "Play"}
+            >
+              {isPlaying ? "⏸" : "▶"}
+            </button>
           </div>
 
           {/* Navigation Links */}
@@ -59,7 +76,7 @@ export default function Header() {
               <li key={item.label}>
                 <Link
                   href={item.href}
-                  className={`${styles.navLink} ${item.active ? styles.active : ""}`}
+                  className={`${styles.navLink} ${isActive(item.href) ? styles.active : ""}`}
                 >
                   {item.label}
                 </Link>
@@ -87,7 +104,14 @@ export default function Header() {
             <span className={styles.mobileLabel}>TUNE IN NOW!</span>
             <span className={styles.mobileName}>Konga FM 103.7</span>
           </div>
-          <button className={styles.mobilePlay}>▶</button>
+          <button 
+            className={styles.mobilePlay}
+            onClick={() => setIsPlaying(!isPlaying)}
+            aria-label={isPlaying ? "Pause" : "Play"}
+            title={isPlaying ? "Pause" : "Play"}
+          >
+            {isPlaying ? "⏸" : "▶"}
+          </button>
         </div>
 
         <button

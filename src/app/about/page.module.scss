@@ -1,0 +1,140 @@
+.aboutPage {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  background-color: #26010f;
+  margin: 0;
+  padding: 0;
+
+  > section {
+    padding-left: 20px;
+    padding-right: 20px;
+
+    @media (min-width: 1441px) {
+      padding-left: 40px;
+      padding-right: 40px;
+    }
+
+    @media (max-width: 1024px) {
+      padding-left: 16px;
+      padding-right: 16px;
+    }
+  }
+}
+
+// ============================================
+// HERO SECTION
+// ============================================
+.heroSection {
+  width: 100%;
+  position: relative;
+  padding-top: 40px;
+  padding-bottom: 40px;
+
+  @media (max-width: 1024px) {
+    padding-top: 32px;
+    padding-bottom: 32px;
+  }
+
+  @media (max-width: 768px) {
+    padding-top: 24px;
+    padding-bottom: 24px;
+  }
+
+  @media (max-width: 480px) {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+}
+
+.imageContainer {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1382 / 579;
+  border-radius: 20px;
+  overflow: hidden;
+
+  @media (max-width: 768px) {
+    border-radius: 16px;
+  }
+
+  @media (max-width: 480px) {
+    border-radius: 12px;
+  }
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+// ============================================
+// INFO SECTIONS
+// ============================================
+.infoSection {
+  width: 100%;
+}
+
+// ============================================
+// SERVICES SECTION
+// ============================================
+.servicesSection {
+  width: 100%;
+}
+
+// ============================================
+// INTRO SECTION
+// ============================================
+.introSection {
+  width: 100%;
+  padding: 60px 0;
+
+  @media (max-width: 1024px) {
+    padding: 50px 0;
+  }
+
+  @media (max-width: 768px) {
+    padding: 40px 0;
+  }
+
+  @media (max-width: 480px) {
+    padding: 32px 0;
+  }
+}
+
+.introContent {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+
+  @media (max-width: 768px) {
+    gap: 20px;
+  }
+}
+
+.introText {
+  font-size: 18px;
+  color: #ccc;
+  margin: 0;
+  line-height: 1.8;
+  letter-spacing: 0.3px;
+
+  @media (max-width: 1024px) {
+    font-size: 16px;
+  }
+
+  @media (max-width: 768px) {
+    font-size: 15px;
+    line-height: 1.7;
+  }
+
+  @media (max-width: 480px) {
+    font-size: 14px;
+  }
+}
+
+.pink {
+  color: #ed017f;
+  font-weight: 600;
+}

@@ -1,0 +1,312 @@
+.playerContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 32px;
+  padding: 64px 42px;
+  background: #3A0014;
+  border-radius: 20px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.visualizerSection {
+  flex-shrink: 0;
+}
+
+.visualizerContainer {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.outerRing {
+  position: absolute;
+  width: 190px;
+  height: 190px;
+  border-radius: 50%;
+  border: 3px solid #e91e63;
+  opacity: 0.9;
+  box-shadow: 0 0 24px rgba(233, 30, 99, 0.4);
+
+  /* Base animation rotating 360 degrees over 10 seconds */
+  animation: spin 10s linear infinite;
+
+  /* This is the secret to pausing without resetting */
+  animation-play-state: paused;
+
+  &.playing {
+    animation-play-state: running;
+  }
+}
+
+.circleImage {
+  width: 175px;
+  height: 175px;
+  border-radius: 50%;
+  object-fit: cover;
+  position: relative;
+  z-index: 2;
+  box-shadow: 0 8px 20px rgba(233, 30, 99, 0.3);
+}
+
+.middleSection {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-width: 0;
+}
+
+.infoSection {
+  color: white;
+  margin-bottom: 20px;
+}
+
+.showTitle {
+  font-size: 22px;
+  font-weight: 700;
+  margin: 0 0 8px 0;
+  color: #ffffff;
+  line-height: 1.3;
+  word-break: break-word;
+}
+
+.hostName {
+  font-size: 15px;
+  color: #e91e63;
+  margin: 0;
+  font-weight: 500;
+}
+
+.time {
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.5);
+  margin: 4px 0 0 0;
+}
+
+.controlsSection {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 20px;
+  flex-shrink: 0;
+}
+
+.controlButton {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: transparent;
+  border: none;
+  color: #e91e63;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  flex-shrink: 0;
+
+  &:hover {
+    background: rgba(233, 30, 99, 0.1);
+    transform: scale(1.1);
+  }
+
+  &:active {
+    transform: scale(0.9);
+  }
+
+  svg {
+    width: 24px;
+    height: 24px;
+  }
+}
+
+.playButton {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #e91e63 0%, #c2185b 100%);
+  border: none;
+  color: white;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  box-shadow: 0 8px 24px rgba(233, 30, 99, 0.4);
+  flex-shrink: 0;
+
+  &:hover {
+    transform: scale(1.1);
+    box-shadow: 0 10px 28px rgba(233, 30, 99, 0.6);
+  }
+
+  &:active {
+    transform: scale(0.92);
+  }
+
+  svg {
+    width: 28px;
+    height: 28px;
+  }
+}
+
+.actionsSection {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  flex-shrink: 0;
+  flex-direction: column;
+}
+
+.actionButton {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: transparent;
+  border: none;
+  color: #e91e63;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  flex-shrink: 0;
+
+  &:hover {
+    background: rgba(233, 30, 99, 0.1);
+    transform: scale(1.15);
+  }
+
+  &:active {
+    transform: scale(0.9);
+  }
+
+  svg {
+    width: 24px;
+    height: 24px;
+  }
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .playerContainer {
+    gap: 28px;
+    padding: 24px 28px;
+  }
+
+  .visualizerContainer {
+    width: 180px;
+    height: 180px;
+  }
+
+  .outerRing {
+    width: 170px;
+    height: 170px;
+  }
+
+  .circleImage {
+    width: 155px;
+    height: 155px;
+  }
+
+  .showTitle {
+    font-size: 19px;
+  }
+
+  .hostName {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 768px) {
+  .playerContainer {
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+    text-align: center;
+  }
+
+  .middleSection {
+    width: 100%;
+  }
+
+  .infoSection {
+    margin-bottom: 16px;
+  }
+
+  .controlsSection {
+    justify-content: center;
+  }
+
+  .visualizerContainer {
+    width: 160px;
+    height: 160px;
+  }
+
+  .outerRing {
+    width: 150px;
+    height: 150px;
+  }
+
+  .circleImage {
+    width: 135px;
+    height: 135px;
+  }
+
+  .showTitle {
+    font-size: 17px;
+  }
+
+  .hostName {
+    font-size: 13px;
+  }
+
+  .actionsSection {
+    flex-direction: row;
+  }
+
+  .controlButton {
+    width: 40px;
+    height: 40px;
+
+    svg {
+      width: 20px;
+      height: 20px;
+    }
+  }
+
+  .playButton {
+    width: 56px;
+    height: 56px;
+
+    svg {
+      width: 24px;
+      height: 24px;
+    }
+  }
+
+  .actionButton {
+    width: 44px;
+    height: 44px;
+
+    svg {
+      width: 22px;
+      height: 22px;
+    }
+  }
+}

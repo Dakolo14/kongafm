@@ -1,0 +1,557 @@
+// ============================================
+// TALENT PROFILE PAGE
+// ============================================
+.talentProfilePage {
+  width: 100%;
+  background-color: #26010f;
+  color: #fff;
+  margin: 0;
+  padding: 0;
+
+  > section {
+    padding-left: 20px;
+    padding-right: 20px;
+
+    @media (min-width: 1441px) {
+      padding-left: 40px;
+      padding-right: 40px;
+    }
+
+    @media (max-width: 1024px) {
+      padding-left: 16px;
+      padding-right: 16px;
+    }
+  }
+}
+
+// ============================================
+// HERO SECTION
+// ============================================
+.heroSection {
+  width: 100%;
+  padding-top: 60px;
+  padding-bottom: 60px;
+
+  @media (max-width: 1024px) {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+
+  @media (max-width: 768px) {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+}
+
+.heroWrapper {
+  display: grid;
+  grid-template-columns: 70% 30%;
+  gap: 40px;
+  align-items: flex-start;
+
+  @media (max-width: 1024px) {
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+  }
+
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+}
+
+// ============================================
+// IMAGE COLUMN (70% - Image + Info)
+// ============================================
+.imageColumn {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  align-items: flex-start;
+  justify-content: flex-start;
+
+  @media (max-width: 768px) {
+    gap: 28px;
+    align-items: center;
+  }
+
+  @media (max-width: 480px) {
+    gap: 24px;
+  }
+}
+
+.columnInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+
+  @media (max-width: 768px) {
+    gap: 16px;
+    align-items: center;
+    text-align: center;
+  }
+}
+
+.imageWrapper {
+  position: relative;
+  width: 100%;
+  max-width: 420px;
+  aspect-ratio: 4 / 5;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 20px 60px rgba(237, 1, 127, 0.15);
+  transition: box-shadow 0.3s ease;
+
+  @media (max-width: 768px) {
+    max-width: 100%;
+    border-radius: 12px;
+  }
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  &:hover {
+    box-shadow: 0 30px 80px rgba(237, 1, 127, 0.25);
+  }
+}
+
+// ============================================
+// SIDE PANEL (View Next + Share)
+// ============================================
+.sidePanel {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+
+  @media (max-width: 768px) {
+    flex-direction: column-reverse;
+  }
+}
+
+// ============================================
+// VIEW NEXT CARD
+// ============================================
+.viewNextCard {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 24px;
+  background: linear-gradient(135deg, #ed017f 0%, #c2015f 100%);
+  border-radius: 14px;
+  cursor: pointer;
+  text-decoration: none;
+  transition: box-shadow 0.3s ease;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  height: fit-content;
+  max-height: 480px;
+
+  &:hover {
+    box-shadow: 0 15px 40px rgba(237, 1, 127, 0.3);
+  }
+
+  @media (max-width: 768px) {
+    padding: 20px;
+    gap: 14px;
+    max-height: none;
+  }
+}
+
+.viewNextHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.viewNextLabel {
+  font-size: 14px;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.9);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+
+  @media (max-width: 768px) {
+    font-size: 13px;
+    letter-spacing: 0.5px;
+  }
+}
+
+.viewNextArrow {
+  font-size: 20px;
+  color: #fff;
+
+  @media (max-width: 768px) {
+    font-size: 18px;
+  }
+}
+
+.nextTalentImage {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  border-radius: 10px;
+  overflow: hidden;
+  background: transparent;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+}
+
+.nextTalentInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.nextTalentName {
+  font-size: 16px;
+  font-weight: 700;
+  color: #fff;
+  margin: 0;
+  line-height: 1.3;
+
+  @media (max-width: 768px) {
+    font-size: 15px;
+  }
+}
+
+.nextTalentRole {
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.85);
+  margin: 0;
+  line-height: 1.3;
+
+  @media (max-width: 768px) {
+    font-size: 12px;
+  }
+}
+
+// ============================================
+// SHARE SECTION
+// ============================================
+.shareSection {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 0;
+  background: transparent;
+  border: none;
+
+  @media (max-width: 768px) {
+    gap: 14px;
+  }
+}
+
+.shareTitle {
+  font-size: 15px;
+  font-weight: 700;
+  color: #fff;
+  margin: 0;
+  line-height: 1.4;
+  letter-spacing: 0.3px;
+
+  @media (max-width: 768px) {
+    font-size: 14px;
+  }
+}
+
+// ============================================
+// SOCIAL LINKS
+// ============================================
+.socialLinks {
+  display: flex;
+  gap: 14px;
+  align-items: center;
+}
+
+.socialIcon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 56px;
+  height: 56px;
+  background: #fff;
+  border: none;
+  border-radius: 8px;
+  color: #ed017f;
+  font-size: 24px;
+  font-weight: 700;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  cursor: pointer;
+  text-decoration: none;
+
+  &:hover {
+    background: #ed017f;
+    color: #fff;
+  }
+
+  @media (max-width: 768px) {
+    width: 52px;
+    height: 52px;
+    font-size: 20px;
+  }
+}
+
+.talentName {
+  font-size: 56px;
+  font-weight: 700;
+  margin: 0;
+  line-height: 1.2;
+  letter-spacing: -1px;
+
+  @media (max-width: 1024px) {
+    font-size: 48px;
+  }
+
+  @media (max-width: 768px) {
+    font-size: 36px;
+  }
+
+  @media (max-width: 480px) {
+    font-size: 28px;
+  }
+}
+
+.talentRole {
+  font-size: 16px;
+  color: #ed017f;
+  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: 600;
+
+  @media (max-width: 768px) {
+    font-size: 14px;
+    letter-spacing: 1.5px;
+  }
+}
+
+// ============================================
+// BIOGRAPHY
+// ============================================
+.biography {
+  font-size: 16px;
+  color: #d0d0d0;
+  line-height: 1.8;
+  margin: 0;
+  letter-spacing: 0.3px;
+  max-width: 900px;
+
+  @media (max-width: 1024px) {
+    font-size: 15px;
+  }
+
+  @media (max-width: 768px) {
+    font-size: 14px;
+    line-height: 1.7;
+  }
+
+  @media (max-width: 480px) {
+    font-size: 13px;
+  }
+}
+
+// ============================================
+// SHOWS SECTION
+// ============================================
+.showsSection {
+  width: 100%;
+  padding-top: 80px;
+  padding-bottom: 80px;
+  border-top: 1px solid rgba(237, 1, 127, 0.1);
+
+  @media (max-width: 1024px) {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+
+  @media (max-width: 768px) {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+}
+
+.showsTitle {
+  font-size: 40px;
+  font-weight: 700;
+  color: #fff;
+  margin: 0 0 50px 0;
+  line-height: 1.3;
+  letter-spacing: -0.5px;
+
+  @media (max-width: 1024px) {
+    font-size: 32px;
+    margin-bottom: 40px;
+  }
+
+  @media (max-width: 768px) {
+    font-size: 28px;
+    margin-bottom: 35px;
+  }
+
+  @media (max-width: 480px) {
+    font-size: 24px;
+    margin-bottom: 30px;
+  }
+}
+
+// ============================================
+// SHOWS GRID
+// ============================================
+.showsGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+  overflow-x: auto;
+  overflow-y: hidden;
+  scroll-behavior: smooth;
+  padding-bottom: 12px;
+
+  &::-webkit-scrollbar {
+    height: 4px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: rgba(237, 1, 127, 0.05);
+    border-radius: 4px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: rgba(237, 1, 127, 0.3);
+    border-radius: 4px;
+
+    &:hover {
+      background: rgba(237, 1, 127, 0.5);
+    }
+  }
+
+  @media (max-width: 1024px) {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    overflow-x: visible;
+    padding-bottom: 0;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+
+  @media (max-width: 768px) {
+    display: flex;
+    gap: 16px;
+    overflow-x: auto;
+    overflow-y: hidden;
+    scroll-behavior: smooth;
+    padding-bottom: 12px;
+
+    &::-webkit-scrollbar {
+      height: 4px;
+    }
+
+    &::-webkit-scrollbar-track {
+      background: rgba(237, 1, 127, 0.05);
+      border-radius: 4px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background: rgba(237, 1, 127, 0.3);
+      border-radius: 4px;
+
+      &:hover {
+        background: rgba(237, 1, 127, 0.5);
+      }
+    }
+  }
+}
+
+// ============================================
+// SHOW CARD
+// ============================================
+.showCard {
+  display: flex;
+  flex-direction: column;
+  border-radius: 12px;
+  overflow: hidden;
+  background: rgba(26, 5, 15, 0.4);
+  border: 1px solid rgba(237, 1, 127, 0.1);
+  transition: all 0.3s ease;
+  cursor: pointer;
+  min-width: 160px;
+  flex-shrink: 0;
+
+  &:hover {
+    border-color: #ed017f;
+    transform: translateY(-8px);
+
+    .showThumbnail img {
+      transform: scale(1.05);
+    }
+  }
+
+  @media (max-width: 1024px) {
+    min-width: auto;
+    flex-shrink: 1;
+  }
+
+  @media (max-width: 768px) {
+    min-width: 140px;
+    flex-shrink: 0;
+    border-radius: 10px;
+  }
+}
+
+.showThumbnail {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  overflow: hidden;
+  background: #1a050f;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+  }
+}
+
+.showInfo {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+
+  @media (max-width: 768px) {
+    padding: 16px;
+    gap: 6px;
+  }
+}
+
+.showTitle {
+  font-size: 17px;
+  font-weight: 700;
+  color: #fff;
+  margin: 0;
+  line-height: 1.4;
+
+  @media (max-width: 768px) {
+    font-size: 15px;
+  }
+}
+
+.showSchedule {
+  font-size: 13px;
+  color: #a8a8a8;
+  margin: 0;
+  line-height: 1.5;
+
+  @media (max-width: 768px) {
+    font-size: 12px;
+  }
+}

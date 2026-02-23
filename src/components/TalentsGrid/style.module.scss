@@ -1,0 +1,182 @@
+// ============================================
+// TALENTS SECTION
+// ============================================
+.talentsSection {
+  width: 100%;
+  padding: 80px 0;
+
+  @media (max-width: 1024px) {
+    padding: 60px 0;
+  }
+
+  @media (max-width: 768px) {
+    padding: 40px 0;
+  }
+}
+
+.talentsHeader {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-bottom: 60px;
+  text-align: center;
+
+  @media (max-width: 768px) {
+    margin-bottom: 40px;
+    text-align: left;
+  }
+}
+
+.talentsTitle {
+  font-size: 44px;
+  font-weight: 700;
+  color: #fff;
+  margin: 0;
+  line-height: 1.3;
+  letter-spacing: -0.5px;
+
+  @media (max-width: 1024px) {
+    font-size: 36px;
+  }
+
+  @media (max-width: 768px) {
+    font-size: 28px;
+  }
+
+  @media (max-width: 480px) {
+    font-size: 24px;
+  }
+}
+
+// ============================================
+// TALENTS GRID
+// ============================================
+.talentsGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+
+  @media (max-width: 1024px) {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+
+  @media (max-width: 768px) {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+  }
+
+  @media (max-width: 480px) {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+}
+
+// ============================================
+// TALENT CARD
+// ============================================
+.talentCard {
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.imageContainer {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  border-radius: 12px;
+  overflow: hidden;
+  margin-bottom: 16px;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+  }
+
+  .talentCard:hover & img {
+    transform: scale(1.05);
+  }
+}
+
+// ============================================
+// TALENT CONTENT
+// ============================================
+.talentContent {
+  display: flex;
+  flex-direction: column;
+  padding: 16px 0;
+}
+
+.talentName {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #fff;
+  margin: 0 0 4px 0;
+  line-height: 1.4;
+
+  @media (max-width: 768px) {
+    font-size: 1.1rem;
+  }
+
+  @media (max-width: 480px) {
+    font-size: 1rem;
+  }
+}
+
+.talentRole {
+  font-size: 0.9rem;
+  color: #a0a0a0;
+  margin: 0 0 16px 0;
+  line-height: 1.5;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+
+  @media (max-width: 768px) {
+    font-size: 0.85rem;
+    margin-bottom: 12px;
+  }
+
+  @media (max-width: 480px) {
+    font-size: 0.8rem;
+  }
+}
+
+// ============================================
+// READ MORE BUTTON
+// ============================================
+.readMoreButton {
+  width: 100%;
+  padding: 14px 20px;
+  background: #fff;
+  color: #26010f;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s ease;
+
+  &:hover {
+    background: #ed017f;
+    color: #fff;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(237, 1, 127, 0.2);
+  }
+
+  @media (max-width: 768px) {
+    font-size: 0.95rem;
+    padding: 12px 16px;
+  }
+
+  @media (max-width: 480px) {
+    font-size: 0.9rem;
+    padding: 12px 16px;
+  }
+}

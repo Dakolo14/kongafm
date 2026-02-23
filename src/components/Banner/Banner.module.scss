@@ -1,11 +1,11 @@
 .bannerContainer {
   width: 100%;
-  padding: 0 60px;
+  padding: 0 20px;
   margin-top: 24px;
   position: relative; // Needed for dots positioning if moved outside
 
   @media (min-width: 1441px) {
-    padding: 0 100px;
+    padding: 0 40px;
   }
 
   @media (max-width: 1024px) {

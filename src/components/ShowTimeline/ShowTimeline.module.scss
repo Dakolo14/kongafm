@@ -23,7 +23,8 @@
   }
 
   .title {
-    font-size: 32px;
+    font-size: 28px;
+    font-weight: 600;
     color: #fff;
     margin: 0;
     letter-spacing: 0.3px;
@@ -61,7 +62,7 @@
     align-items: center;
 
     @media (max-width: 1024px) {
-      padding: 0px;
+      padding: 0 10px;
     }
 
     @media (min-width: 1025px) {
@@ -177,7 +178,7 @@
   }
 
   .showName {
-    font-size: 20px;
+    font-size: 16px;
     font-weight: 600;
     color: #fff;
     margin: 0 0 10px 0;

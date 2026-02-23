@@ -57,7 +57,6 @@ const NewsGrid: React.FC<NewsGridProps> = ({
 
               <div className={styles.buttonWrapper}>
                 <Button
-                  href={featuredArticle.link || "#"}
                   text="Read More"
                   variant="primary"
                 />

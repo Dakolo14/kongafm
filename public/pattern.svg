@@ -1,0 +1,13 @@
+<svg viewBox="0 0 1200 300" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <pattern id="chevron" x="0" y="0" width="200" height="300" patternUnits="userSpaceOnUse">
+      <g stroke="#ffffff" stroke-width="1.5" stroke-opacity="0.15" fill="none">
+        <!-- Left pointing V -->
+        <path d="M100 0 L50 150 L100 300"/>
+        <!-- Right pointing V -->
+        <path d="M100 0 L150 150 L100 300"/>
+      </g>
+    </pattern>
+  </defs>
+  <rect width="1200" height="300" fill="url(#chevron)"/>
+</svg>

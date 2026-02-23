@@ -1,0 +1,228 @@
+.footer {
+  width: 100%;
+  margin-top: 80px;
+}
+
+// ============================================
+// NEWSLETTER SECTION
+// ============================================
+.newsletterSection {
+  position: relative;
+  background-color: #1a050f;
+  
+  /* Use the pattern image from the public folder */
+  background-image: url('/patternimg.png');
+  background-position: center top;
+  background-repeat: repeat;
+  background-size: auto;
+  background-attachment: scroll;
+  
+  /* Keep flexbox centering for the form */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 62px 20px;
+
+  @media (min-width: 1441px) {
+    padding: 62px 40px;
+    max-height: 500px;
+  }
+
+  @media (max-width: 1024px) {
+    padding: 60px 16px;
+  }
+
+  @media (max-width: 768px) {
+    padding: 50px 20px;
+    background-image: none;
+  }
+}
+
+.newsletterContent {
+  position: relative;
+  z-index: 1;
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.newsletterTitle {
+  font-size: 32px;
+  font-weight: 700;
+  color: #fff;
+  margin: 0 0 32px 0;
+  letter-spacing: 0.5px;
+
+  @media (max-width: 768px) {
+    font-size: 24px;
+    margin-bottom: 24px;
+  }
+
+  @media (max-width: 480px) {
+    font-size: 20px;
+    margin-bottom: 20px;
+  }
+}
+
+.newsletterForm {
+  display: flex;
+  gap: 12px;
+  flex-direction: column;
+  width: 100%;
+  max-width: 400px;
+  margin: 0 auto;
+
+  @media (max-width: 480px) {
+    gap: 10px;
+  }
+}
+
+.emailInput {
+  flex: 1;
+  width: 100%;
+  padding: 14px 16px;
+  background-color: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 6px;
+  color: #fff;
+  font-size: 14px;
+  font-family: inherit;
+  transition: all 0.3s ease;
+
+  &::placeholder {
+    color: rgba(255, 255, 255, 0.5);
+  }
+
+  &:focus {
+    outline: none;
+    border-color: #ed017f;
+    box-shadow: 0 0 0 3px rgba(237, 1, 127, 0.1);
+  }
+
+  @media (max-width: 480px) {
+    padding: 12px 14px;
+    font-size: 13px;
+  }
+}
+
+.submitButton {
+  padding: 14px 32px;
+  background-color: #fff;
+  color: #26010f;
+  border: none;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+
+  &:hover {
+    background-color: #ed017f;
+    color: #fff;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(237, 1, 127, 0.3);
+  }
+
+  &:active {
+    transform: translateY(0);
+  }
+
+  @media (max-width: 480px) {
+    padding: 12px 24px;
+    font-size: 13px;
+  }
+}
+
+// ============================================
+// LINKS SECTION
+// ============================================
+.linksSection {
+  background-color: #1a050f;
+  padding: 32px 20px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+
+  @media (min-width: 1441px) {
+    padding: 32px 40px;
+  }
+
+  @media (max-width: 1024px) {
+    padding: 24px 16px;
+  }
+
+  @media (max-width: 768px) {
+    padding: 20px 16px;
+  }
+}
+
+.linksNav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 24px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  @media (max-width: 768px) {
+    gap: 16px;
+  }
+
+  @media (max-width: 480px) {
+    flex-direction: column;
+    gap: 12px;
+  }
+}
+
+.link {
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.7);
+  text-decoration: none;
+  transition: all 0.3s ease;
+  padding: 4px 0;
+  border-bottom: 2px solid transparent;
+
+  &:hover {
+    color: #ed017f;
+    border-bottom-color: #ed017f;
+  }
+
+  @media (max-width: 480px) {
+    font-size: 13px;
+  }
+}
+
+// ============================================
+// COPYRIGHT SECTION
+// ============================================
+.copyrightSection {
+  background-color: #1a050f;
+  padding: 24px 20px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  text-align: center;
+
+  @media (min-width: 1441px) {
+    padding: 24px 40px;
+  }
+
+  @media (max-width: 1024px) {
+    padding: 20px 16px;
+  }
+
+  @media (max-width: 768px) {
+    padding: 18px 16px;
+  }
+}
+
+.copyright {
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.5);
+  margin: 0;
+  letter-spacing: 0.3px;
+
+  @media (max-width: 480px) {
+    font-size: 12px;
+  }
+}
