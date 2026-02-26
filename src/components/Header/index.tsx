@@ -173,7 +173,7 @@ export default function Header() {
             <li key={item.label}>
               <Link
                 href={item.href}
-                className={item.active ? styles.active : ""}
+                className={isActive(item.href) ? styles.active : ""}
                 onClick={() => setMenuOpen(false)}
               >
                 {item.label}

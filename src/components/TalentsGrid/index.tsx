@@ -11,7 +11,7 @@ interface Talent {
 }
 
 interface TalentsGridProps {
-  talents: Talent[];
+  talents?: Talent[];
 }
 
 const defaultTalents: Talent[] = [
