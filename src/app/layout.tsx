@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Geist, Geist_Mono, Poppins, Source_Serif_4 } from "next/font/google";
 import Header from "@/components/Header";
 import BackToTop from "@/components/BackToTop";
 import Footer from "@/components/Footer";
@@ -14,6 +14,20 @@ const geistSans = Geist({
 const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
   subsets: ["latin"],
+});
+
+const poppins = Poppins({
+  weight: ["400", "500"],
+  style: ["normal", "italic"],
+  subsets: ["latin"],
+  variable: "--font-poppins",
+});
+
+const sourceSerif = Source_Serif_4({
+  weight: ["400"],
+  style: ["italic"],
+  subsets: ["latin"],
+  variable: "--font-source-serif",
 });
 
 export const metadata: Metadata = {
@@ -52,7 +66,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} ${poppins.variable} ${sourceSerif.variable} antialiased`}
       >
         <FMPlayerProvider>
           <Header />

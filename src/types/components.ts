@@ -20,27 +20,9 @@ export interface ShowTimelineProps {
 }
 
 // ============================================
-// News Grid Types
+// News Grid Types (now in NewsGrid/index.tsx)
 // ============================================
-
-export interface NewsItem {
-  id: string;
-  imageUrl: string;
-  title: string;
-  description?: string;
-  date?: string;
-  category?: string;
-  link?: string;
-}
-
-export interface NewsGridProps {
-  featuredArticle: NewsItem & {
-    fullContent?: string;
-  };
-  sidebarArticles: NewsItem[];
-  title?: string;
-  viewAllLink?: string;
-}
+// NewsArticle and NewsGridProps are defined in the NewsGrid component
 
 // ============================================
 // Product Showcase Types

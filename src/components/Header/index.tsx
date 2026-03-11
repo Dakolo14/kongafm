@@ -40,7 +40,13 @@ export default function Header() {
 
       {/* Top Pink Banner */}
       <div className={styles.topBanner}>
-        <span className={styles.bannerText}>MERGER LOGO</span>
+        <Image
+          src="/kongacommlogo.png"
+          alt="Konga Comms Logo"
+          width={234}
+          height={65}
+          className={styles.bannerLogo}
+        />
       </div>
 
       {/* Navigation Bar */}

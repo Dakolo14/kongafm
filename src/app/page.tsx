@@ -2,12 +2,12 @@ import type { Metadata } from "next";
 import Banner from "@/components/Banner";
 import ShowTimeline from "@/components/ShowTimeline";
 import TVShowTimeline from "@/components/TVShowTimeline";
-import NewsGrid from "@/components/NewsGrid"; // Replaced TrendingNews
+
 import ProductShowcase from "@/components/ProductShowcase";
 import SellBanner from "@/components/SellBanner";
 import BrandPlaylist, { PlaylistData } from "@/components/BrandPlaylist";
 import Events, { EventItem } from "@/components/Events";
-import { ShowCard, NewsItem, ProductItem } from "@/types/components";
+import { ShowCard, ProductItem } from "@/types/components";
 import styles from "./page.module.scss";
 
 // SEO Metadata for Home Page
@@ -132,57 +132,7 @@ const TV_SHOWS: ShowCard[] = [
   },
 ];
 
-// News Data
-const NEWS_DATA = {
-  featured: {
-    id: "news-featured-1",
-    imageUrl:
-      "https://images.unsplash.com/photo-1504384308090-c894fdcc538d?w=800&h=500&fit=crop",
-    title: "UK: Rema Brings DBanj On Stage, Praises Him",
-    category: "Entertainment",
-    description:
-      "In a stunning performance at the O2 Arena in London, Rema brought DBanj on stage during his set.",
-    fullContent:
-      "Rema delivered an impressive performance at the O2 Arena in London, where he surprised the audience by bringing the legendary DBanj on stage. The duo performed some of their hit collaborations, much to the delight of the crowd. This reunion marks a significant moment in Afrobeats history as the two artists have not performed together in several years.",
-    date: "January 12, 2026",
-    link: "/news/rema-dbanj",
-  },
-  sidebarArticles: [
-    {
-      id: "news-side-1",
-      imageUrl:
-        "https://images.unsplash.com/photo-1492684223066-81342ee5ff30?w=200&h=200&fit=crop",
-      title: "Burna Boy Announces African Tour",
-      description:
-        "Music powerhouse Burna Boy has officially announced dates for his highly anticipated African tour, promising electric performances.",
-      category: "Music",
-      date: "January 11, 2026",
-      link: "/news/burna-tour",
-    },
-    {
-      id: "news-side-2",
-      imageUrl:
-        "https://images.unsplash.com/photo-1511379938547-c1f69b13d835?w=200&h=200&fit=crop",
-      title: "Wizkid Releases New Album",
-      description:
-        "Fans are in a frenzy as Wizkid drops his surprise album featuring collaborations with international stars.",
-      category: "Music",
-      date: "January 10, 2026",
-      link: "/news/wizkid-album",
-    },
-    {
-      id: "news-side-3",
-      imageUrl:
-        "https://images.unsplash.com/photo-1487180144351-b8472da7d491?w=200&h=200&fit=crop",
-      title: "Afrobeats Grammy Nominations",
-      description:
-        "A record number of Afrobeats artists have been nominated for this year's Grammy Awards, signaling global dominance.",
-      category: "Awards",
-      date: "January 9, 2026",
-      link: "/news/grammy-noms",
-    },
-  ],
-};
+
 
 // Events Mock Data (for EventCarousel when needed)
 const EVENTS = [
@@ -459,13 +409,7 @@ export default function Home() {
         variant="fm"
       />
 
-      {/* Featured News Section */}
-      <NewsGrid
-        title="News"
-        featuredArticle={NEWS_DATA.featured}
-        sidebarArticles={NEWS_DATA.sidebarArticles}
-        viewAllLink="/news"
-      />
+
 
       {/* TV Show Timeline Section */}
       <TVShowTimeline

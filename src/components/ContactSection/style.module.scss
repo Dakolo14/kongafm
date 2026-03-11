@@ -1,0 +1,169 @@
+// ============================================
+// CONTACT SECTION
+// ============================================
+
+.contactSection {
+  width: 100%;
+  background-color: #26010f;
+  color: #fff;
+  padding: 80px 40px;
+
+  @media (min-width: 1441px) {
+    padding: 100px 60px;
+  }
+
+  @media (min-width: 1920px) {
+    padding: 120px 80px;
+  }
+
+  @media (min-width: 2560px) {
+    padding: 140px 100px;
+  }
+
+  @media (max-width: 1024px) {
+    padding: 60px 30px;
+  }
+
+  @media (max-width: 768px) {
+    padding: 50px 20px;
+  }
+}
+
+.container {
+  max-width: 700px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+// ============================================
+// FORM WRAPPER
+// ============================================
+
+.formWrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+// ============================================
+// FORM
+// ============================================
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+// ============================================
+// FORM GROUPS
+// ============================================
+
+.formGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+// ============================================
+// LABELS
+// ============================================
+
+.label {
+  font-size: 13px;
+  color: #ed017f;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.7px;
+}
+
+// ============================================
+// INPUTS & SELECTS
+// ============================================
+
+.input,
+.select,
+.textarea {
+  padding: 14px 16px;
+  background: rgba(0, 0, 0, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 6px;
+  color: #fff;
+  font-size: 15px;
+  font-family: inherit;
+  transition: all 0.3s ease;
+  outline: none;
+
+  &::placeholder {
+    color: rgba(255, 255, 255, 0.35);
+  }
+
+  &:focus {
+    border-color: #ed017f;
+    background: rgba(237, 1, 127, 0.05);
+    box-shadow: 0 0 0 3px rgba(237, 1, 127, 0.1);
+  }
+
+  &:hover:not(:focus) {
+    border-color: rgba(237, 1, 127, 0.2);
+  }
+}
+
+.select {
+  cursor: pointer;
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%23ed017f' d='M6 9L1 4h10z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 16px center;
+  padding-right: 40px;
+
+  option {
+    background-color: #26010f;
+    color: #fff;
+  }
+}
+
+.textarea {
+  min-height: 120px;
+  resize: none;
+  font-size: 15px;
+  line-height: 1.6;
+
+  @media (max-width: 768px) {
+    min-height: 100px;
+  }
+}
+
+// ============================================
+// SUBMIT BUTTON
+// ============================================
+
+.submitButton {
+  padding: 16px 24px;
+  background-color: #ed017f;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 0.7px;
+  margin-top: 16px;
+  width: 100%;
+
+  &:hover:not(:disabled) {
+    background: linear-gradient(135deg, #ed017f 0%, #c2015f 100%);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(237, 1, 127, 0.4);
+  }
+
+  &:active:not(:disabled) {
+    transform: translateY(0);
+  }
+
+  &:disabled {
+    opacity: 0.8;
+    cursor: not-allowed;
+  }
+}

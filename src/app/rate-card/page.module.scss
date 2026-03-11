@@ -1,0 +1,125 @@
+.rateCardPage {
+  min-height: 100vh;
+  background-color: #26010f;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 20px;
+
+  @media (min-width: 1441px) {
+    padding: 40px;
+  }
+
+  @media (min-width: 1920px) {
+    padding: 50px;
+  }
+
+  @media (min-width: 2560px) {
+    padding: 60px;
+  }
+
+  @media (max-width: 1024px) {
+    padding: 30px 16px;
+  }
+
+  @media (max-width: 768px) {
+    padding: 20px;
+  }
+}
+
+.container {
+  width: 100%;
+  max-width: 600px;
+}
+
+.content {
+  text-align: center;
+  padding: 60px 40px;
+  background: linear-gradient(135deg, rgba(233, 30, 99, 0.05), rgba(233, 30, 99, 0.02));
+  border: 1px solid rgba(233, 30, 99, 0.2);
+  border-radius: 20px;
+
+  @media (max-width: 768px) {
+    padding: 40px 24px;
+    border-radius: 16px;
+  }
+}
+
+.title {
+  font-size: 44px;
+  font-weight: 700;
+  color: #ffffff;
+  margin: 0 0 24px 0;
+  line-height: 1.2;
+
+  @media (max-width: 768px) {
+    font-size: 32px;
+    margin-bottom: 18px;
+  }
+}
+
+.description {
+  font-size: 18px;
+  color: rgba(255, 255, 255, 0.8);
+  line-height: 1.6;
+  margin: 0 0 40px 0;
+
+  @media (max-width: 768px) {
+    font-size: 16px;
+    margin-bottom: 32px;
+  }
+}
+
+.downloadButton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  background: linear-gradient(135deg, #e91e63 0%, #c2185b 100%);
+  color: #ffffff;
+  text-decoration: none;
+  padding: 16px 40px;
+  border-radius: 12px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 8px 24px rgba(233, 30, 99, 0.3);
+  border: none;
+
+  &:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 32px rgba(233, 30, 99, 0.4);
+  }
+
+  &:active {
+    transform: translateY(-2px);
+  }
+
+  svg {
+    width: 20px;
+    height: 20px;
+    transition: transform 0.3s ease;
+  }
+
+  &:hover svg {
+    transform: translateY(2px);
+  }
+
+  @media (max-width: 768px) {
+    width: 100%;
+    padding: 14px 32px;
+    font-size: 15px;
+  }
+}
+
+.fileInfo {
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.5);
+  margin: 24px 0 0 0;
+  font-weight: 500;
+
+  @media (max-width: 768px) {
+    margin-top: 20px;
+  }
+}

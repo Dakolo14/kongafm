@@ -1,13 +1,13 @@
 "use client";
 
 import React from "react";
-import { NewsItem } from "@/types/components";
+import { NewsArticle } from "@/components/NewsGrid";
 import Button from "@/components/Button";
 import styles from "./TrendingNews.module.scss";
 
 interface TrendingNewsProps {
   title?: string;
-  article: NewsItem & { fullContent?: string };
+  article: NewsArticle & { fullContent?: string };
 }
 
 const TrendingNews: React.FC<TrendingNewsProps> = ({ title, article }) => {
@@ -32,7 +32,7 @@ const TrendingNews: React.FC<TrendingNewsProps> = ({ title, article }) => {
           )}
 
           <Button
-            href={article.link || "#"}
+            href={article.slug ? `/updates/${article.slug}` : "#"}
             text="Read More"
             variant="primary"
           />

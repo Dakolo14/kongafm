@@ -74,14 +74,12 @@ const ALL_SHOWS = [
 export default function ShowsPage() {
   return (
     <main className={styles.showsPage}>
-      {/* Header Section */}
-      <section className={styles.headerSection}>
-        <div className={styles.headerContent}>
-          <h1 className={styles.pageTitle}>Our Shows</h1>
-          <p className={styles.pageSubtitle}>
-            Discover Konga Communications' diverse television programming. From
-            business and entrepreneurship to travel and health, we have
-            something for everyone.
+      {/* Hero Section */}
+      <section className={styles.heroSection}>
+        <div className={styles.heroContainer}>
+          <h1 className={styles.heroTitle}>Our Shows</h1>
+          <p className={styles.heroSubtitle}>
+            Discover Konga Communications' diverse television programming. From business and entrepreneurship to travel and health, we have something for everyone.
           </p>
         </div>
       </section>

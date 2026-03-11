@@ -12,11 +12,11 @@
 .topBanner {
   width: 100%;
   background-color: #ed017f;
-  padding: 18px 20px;
+  padding: 10px 20px;
   text-align: center;
 
   @media (min-width: 1441px) {
-    padding: 18px 40px;
+    padding: 10px 40px;
   }
 
   @media (max-width: 1024px) {
@@ -28,6 +28,13 @@
     font-size: 20px;
     font-weight: 700;
     letter-spacing: 1.5px;
+  }
+
+  .bannerLogo {
+    height: 65px;
+    width: auto;
+    margin-inline: auto;
+    object-fit: contain;
   }
 }
 

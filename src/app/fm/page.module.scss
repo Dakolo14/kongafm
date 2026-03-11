@@ -7,6 +7,14 @@
     padding: 40px;
   }
 
+  @media (min-width: 1920px) {
+    padding: 50px;
+  }
+
+  @media (min-width: 2560px) {
+    padding: 60px;
+  }
+
   @media (max-width: 1024px) {
     padding: 16px;
   }
