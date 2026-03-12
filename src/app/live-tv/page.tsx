@@ -72,9 +72,11 @@ export default function LiveTVPage() {
 
       {/* Promotional Banner */}
       <SellBanner
-        imageUrl={SELL_BANNER.imageUrl}
-        link={SELL_BANNER.link}
-        altText={SELL_BANNER.altText}
+        mobileImageUrl="https://www-konga-com-res.cloudinary.com/image/upload/v1772451324/contentservice/Premium%20Banner%203%20%283%29.gif_LffQ9awJz0.gif"
+        mobileLink="https://www.konga.com/content/konga-berekete"
+        desktopImageUrl="/promotionalbannerdesktop.png"
+        desktopLink="https://www.konga.com/deals/daily"
+        altText="Promotional content"
       />
     </main>
   );

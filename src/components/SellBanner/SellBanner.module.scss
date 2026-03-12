@@ -40,3 +40,20 @@
     aspect-ratio: 2 / 1;
   }
 }
+
+// Responsive image variants
+.mobileImage {
+  display: none;
+
+  @media (max-width: 1024px) {
+    display: block;
+  }
+}
+
+.desktopImage {
+  display: block;
+
+  @media (max-width: 1024px) {
+    display: none;
+  }
+}
