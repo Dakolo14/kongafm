@@ -31,7 +31,6 @@ const FM_SHOWS: ShowCard[] = [
     imageUrl: "/FMShows/AM Breif.png",
     showName: "AM BRIEF",
     time: "5:00am - 7:00am",
-    badge: "LIVE",
     link: "/shows/am-brief",
   },
   {
@@ -79,7 +78,6 @@ const TV_SHOWS: ShowCard[] = [
     imageUrl: "/TVShows/KTV - Scoop.png",
     showName: "SCOOP",
     time: "7:00 - 8:00 PM",
-    badge: "LIVE",
     link: "/tv/scoop",
   },
   {

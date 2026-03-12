@@ -21,7 +21,6 @@ const TV_SHOWS: ShowCard[] = [
     imageUrl: "/TVShows/KTV - Scoop.png",
     showName: "SCOOP",
     time: "7:00 - 8:00 PM",
-    badge: "LIVE",
     link: "/tv/scoop",
   },
   {

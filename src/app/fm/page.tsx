@@ -29,7 +29,6 @@ const FM_SHOWS: ShowCard[] = [
     imageUrl: "/FMShows/AM Breif.png",
     showName: "AM BRIEF",
     time: "5:00am - 7:00am",
-    badge: "LIVE",
     link: "/shows/am-brief",
   },
   {
