@@ -28,47 +28,47 @@ export const metadata: Metadata = {
 const FM_SHOWS: ShowCard[] = [
   {
     id: "fm-1",
-    imageUrl: "./morningInspiration.png",
-    showName: "MORNING INSPIRATION",
+    imageUrl: "/FMShows/AM Breif.png",
+    showName: "AM BRIEF",
     time: "5:00am - 7:00am",
     badge: "LIVE",
-    link: "/shows/morning-inspiration",
+    link: "/shows/am-brief",
   },
   {
     id: "fm-2",
-    imageUrl: "./kongaDeals.png",
-    showName: "KONGA DEALS",
-    time: "7:00am - 8:00am",
-    link: "/shows/urban-vibes",
+    imageUrl: "/FMShows/Beyond the headlines.png",
+    showName: "BEYOND THE HEADLINES",
+    time: "8:00am - 8:30am",
+    link: "/shows/beyond-headlines",
   },
   {
     id: "fm-3",
-    imageUrl: "./beyondHeadlines.png",
-    showName: "BEYOND THE HEADLINES",
-    time: "8:00am - 8:30am",
-    link: "/shows/afternoon-drive",
+    imageUrl: "/FMShows/Creators corner.png",
+    showName: "CREATORS CORNER",
+    time: "9:00am - 10:00am",
+    link: "/shows/creators-corner",
   },
   {
     id: "fm-4",
-    imageUrl: "./theScoop.png",
-    showName: "THE SCOOP",
-    time: "9:00am - 9:30am",
-    link: "/shows/rhythm-soul",
+    imageUrl: "/FMShows/Cruise Control.png",
+    showName: "CRUISE CONTROL",
+    time: "12:00pm - 1:00pm",
+    link: "/shows/cruise-control",
   },
   {
     id: "fm-5",
-    imageUrl: "./juiceBox.png",
-    showName: "JUICE BOX",
-    time: "1:00pm - 2:00pm",
-    link: "/shows/night-energy",
+    imageUrl: "/FMShows/Shop on radio.png",
+    showName: "SHOP ON RADIO",
+    time: "4:00pm - 5:00pm",
+    link: "/shows/shop-on-radio",
   },
   {
     id: "fm-6",
-    imageUrl: "./trafficTunes.png",
-    showName: "TRAFFIC AND TUNES",
-    time: "4:00pm - 6:00pm",
-    badge: "NEW",
-    link: "/shows/midnight-beats",
+    imageUrl: "/FMShows/The SCoop.png",
+    showName: "THE SCOOP",
+    time: "6:00pm - 7:00pm",
+    badge: "POPULAR",
+    link: "/shows/the-scoop",
   },
 ];
 
@@ -76,59 +76,18 @@ const FM_SHOWS: ShowCard[] = [
 const TV_SHOWS: ShowCard[] = [
   {
     id: "tv-1",
-    imageUrl:
-      "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop",
-    showName: "Entertainment Watch",
-    hostName: "Toke Makinwa",
+    imageUrl: "/TVShows/KTV - Scoop.png",
+    showName: "SCOOP",
     time: "7:00 - 8:00 PM",
     badge: "LIVE",
-    link: "/tv/entertainment-watch",
+    link: "/tv/scoop",
   },
   {
     id: "tv-2",
-    imageUrl:
-      "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=400&h=400&fit=crop",
-    showName: "Celebrity Talk Show",
-    hostName: "Ebru Oladapo",
+    imageUrl: "/TVShows/Reason This.png",
+    showName: "REASON THIS",
     time: "8:00 - 9:00 PM",
-    link: "/tv/celebrity-talk",
-  },
-  {
-    id: "tv-3",
-    imageUrl:
-      "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=400&h=400&fit=crop",
-    showName: "Music Countdown",
-    hostName: "Shade Okoya",
-    time: "9:00 - 10:00 PM",
-    link: "/tv/music-countdown",
-  },
-  {
-    id: "tv-4",
-    imageUrl:
-      "https://images.unsplash.com/photo-1534528741775-c2cbc8ed0e8d?w=400&h=400&fit=crop",
-    showName: "News Tonight",
-    hostName: "Linda Ikechukwu",
-    time: "10:00 - 11:00 PM",
-    link: "/tv/news-tonight",
-  },
-  {
-    id: "tv-5",
-    imageUrl:
-      "https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=400&h=400&fit=crop",
-    showName: "Sports Update",
-    hostName: "Segun Awosanya",
-    time: "11:00 PM - 12:00 AM",
-    badge: "HOT",
-    link: "/tv/sports-update",
-  },
-  {
-    id: "tv-6",
-    imageUrl:
-      "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=400&h=400&fit=crop",
-    showName: "Late Night Show",
-    hostName: "Ofili",
-    time: "12:00 - 1:00 AM",
-    link: "/tv/late-night-show",
+    link: "/tv/reason-this",
   },
 ];
 
@@ -405,7 +364,7 @@ export default function Home() {
       <ShowTimeline
         title="FM Show Timeline"
         shows={FM_SHOWS}
-        viewAllLink="/fm-shows"
+        viewAllLink="/fm"
         variant="fm"
       />
 
@@ -413,7 +372,7 @@ export default function Home() {
       <TVShowTimeline
         title="TV Show Timeline"
         shows={TV_SHOWS}
-        viewAllLink="/tv-shows"
+        viewAllLink="/shows"
         variant="tv"
       />
 

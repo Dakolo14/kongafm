@@ -18,59 +18,18 @@ export const metadata: Metadata = {
 const TV_SHOWS: ShowCard[] = [
   {
     id: "tv-1",
-    imageUrl:
-      "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop",
-    showName: "Entertainment Watch",
-    hostName: "Toke Makinwa",
+    imageUrl: "/TVShows/KTV - Scoop.png",
+    showName: "SCOOP",
     time: "7:00 - 8:00 PM",
     badge: "LIVE",
-    link: "/tv/entertainment-watch",
+    link: "/tv/scoop",
   },
   {
     id: "tv-2",
-    imageUrl:
-      "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=400&h=400&fit=crop",
-    showName: "Celebrity Talk Show",
-    hostName: "Ebru Oladapo",
+    imageUrl: "/TVShows/Reason This.png",
+    showName: "REASON THIS",
     time: "8:00 - 9:00 PM",
-    link: "/tv/celebrity-talk",
-  },
-  {
-    id: "tv-3",
-    imageUrl:
-      "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=400&h=400&fit=crop",
-    showName: "Music Countdown",
-    hostName: "Shade Okoya",
-    time: "9:00 - 10:00 PM",
-    link: "/tv/music-countdown",
-  },
-  {
-    id: "tv-4",
-    imageUrl:
-      "https://images.unsplash.com/photo-1534528741775-c2cbc8ed0e8d?w=400&h=400&fit=crop",
-    showName: "News Tonight",
-    hostName: "Linda Ikechukwu",
-    time: "10:00 - 11:00 PM",
-    link: "/tv/news-tonight",
-  },
-  {
-    id: "tv-5",
-    imageUrl:
-      "https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=400&h=400&fit=crop",
-    showName: "Sports Update",
-    hostName: "Segun Awosanya",
-    time: "11:00 PM - 12:00 AM",
-    badge: "HOT",
-    link: "/tv/sports-update",
-  },
-  {
-    id: "tv-6",
-    imageUrl:
-      "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=400&h=400&fit=crop",
-    showName: "Late Night Show",
-    hostName: "Ofili",
-    time: "12:00 - 1:00 AM",
-    link: "/tv/late-night-show",
+    link: "/tv/reason-this",
   },
 ];
 
