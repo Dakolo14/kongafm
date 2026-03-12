@@ -29,13 +29,13 @@ const DEFAULT_NEWS_DATA = {
   featured: {
     id: "news-featured-1",
     imageUrl:
-      "https://images.unsplash.com/photo-1504384308090-c894fdcc538d?w=800&h=500&fit=crop",
-    title: "UK: Rema Brings DBanj On Stage, Praises Him",
-    category: "Entertainment",
+      "https://www.bellanaija.com/wp-content/uploads/2025/09/TDAFRICA-AT-KONGAFM-STUDIOS-2.jpg",
+    title: "Konga103.7FM amplifies TD Africa’s Super App revolution on The Market Square",
+    category: "News",
     description:
-      "In a stunning performance at the O2 Arena in London, Rema brought DBanj on stage during his set.",
-    date: "January 12, 2026",
-    link: "/news/rema-dbanj",
+      "Konga103.7FM once again demonstrated its commitment to driving conversations that shape Nigeria’s digital and commercial landscape with an enlightening edition of The Market Square hosted by Lilian Duru-Valentine.",
+    date: "September 12, 2025",
+    link: "https://www.bellanaija.com/2025/09/konga1037fm-amplifies-tdafrica/",
   },
   sidebarArticles: [
     {
@@ -48,7 +48,7 @@ const DEFAULT_NEWS_DATA = {
       category: "Music",
       date: "January 11, 2026",
       link: "/news/burna-tour",
-    },
+    }, 
     {
       id: "news-side-2",
       imageUrl:
