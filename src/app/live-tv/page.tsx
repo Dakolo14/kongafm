@@ -44,15 +44,15 @@ export default function LiveTVPage() {
   return (
     <main className={styles.liveTVPage}>
 
-      {/* Live Player Section */}
+      {/* Video Player Section */}
       <section className={styles.livePlayerSection}>
         <div className={styles.playerContainer}>
           <div className={styles.youtubePlayer}>
             <iframe
               width="100%"
               height="100%"
-              src="https://www.youtube.com/watch?v=JbX4s6Fc0dw"
-              title="Konga TV Live Stream"
+              src="https://www.youtube.com/embed/JbX4s6Fc0dw"
+              title="Konga TV Video Archive"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
               allowFullScreen
             ></iframe>
@@ -60,9 +60,9 @@ export default function LiveTVPage() {
         </div>
 
         <div className={styles.playerInfo}>
-          <h1 className={styles.liveTitle}>Konga TV Live</h1>
+          <h1 className={styles.liveTitle}>Konga TV Videos</h1>
           <p className={styles.liveDescription}>
-            Watch Konga TV live stream and stay updated with the latest entertainment, news, and shows.
+            Watch our latest Konga TV content and catch up on previous episodes of your favorite shows.
           </p>
         </div>
       </section>
