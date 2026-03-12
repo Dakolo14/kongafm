@@ -22,6 +22,7 @@ interface NewsGridProps {
   viewAllLink?: string;
   featuredArticle?: NewsArticle;
   sidebarArticles?: NewsArticle[];
+  articles?: NewsArticle[];
 }
 
 // Mock data
@@ -79,7 +80,64 @@ const NewsGrid: React.FC<NewsGridProps> = ({
   viewAllLink,
   featuredArticle = DEFAULT_NEWS_DATA.featured,
   sidebarArticles = DEFAULT_NEWS_DATA.sidebarArticles,
+  articles,
 }) => {
+  // If articles array is provided, display as grid (for updates page)
+  if (articles && articles.length > 0) {
+    return (
+      <section className={styles.newsGrid}>
+        <div className={styles.header}>
+          {title && <h2 className={styles.sectionTitle}>{title}</h2>}
+          {viewAllLink && (
+            <a href={viewAllLink} className={styles.viewAll}>
+              View All
+            </a>
+          )}
+        </div>
+
+        <div className={styles.articlesGridContainer}>
+          {articles.map((article) => (
+            <article key={article.id} className={styles.gridArticle}>
+              <a
+                href={article.link || article.slug ? `/updates/${article.slug}` : "#"}
+                className={styles.gridLink}
+              >
+                <div className={styles.gridImageWrapper}>
+                  <img
+                    src={article.imageUrl}
+                    alt={article.title}
+                    className={styles.gridImage}
+                  />
+                  {article.category && (
+                    <span className={styles.gridCategoryBadge}>
+                      {article.category}
+                    </span>
+                  )}
+                </div>
+
+                <div className={styles.gridContent}>
+                  <h3 className={styles.gridTitle}>{article.title}</h3>
+
+                  {article.excerpt && (
+                    <p className={styles.gridExcerpt}>{article.excerpt}</p>
+                  )}
+
+                  <div className={styles.gridMeta}>
+                    {article.date && <span>{article.date}</span>}
+                    {article.readTime && (
+                      <span>• {article.readTime}</span>
+                    )}
+                  </div>
+                </div>
+              </a>
+            </article>
+          ))}
+        </div>
+      </section>
+    );
+  }
+
+  // Default featured + sidebar layout for homepage
   return (
     <section className={styles.newsGrid}>
       <div className={styles.header}>
