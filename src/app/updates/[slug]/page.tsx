@@ -272,7 +272,7 @@ export default function ArticleDetailPage() {
     (a) => a.category === article.category && a.slug !== slug
   ).slice(0, 8);
 
-  const fullContent = ARTICLE_CONTENT[slug] || article.excerpt;
+  const fullContent = ARTICLE_CONTENT[slug] || article.excerpt || "";
 
   return (
     <main className={styles.articlePage}>

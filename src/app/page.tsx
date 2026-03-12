@@ -2,8 +2,7 @@ import type { Metadata } from "next";
 import Banner from "@/components/Banner";
 import ShowTimeline from "@/components/ShowTimeline";
 import TVShowTimeline from "@/components/TVShowTimeline";
-import NewsGrid, { type NewsArticle } from "@/components/NewsGrid";
-import TrendingNews from "@/components/TrendingNews";
+import NewsGrid from "@/components/NewsGrid";
 import ProductShowcase from "@/components/ProductShowcase";
 import SellBanner from "@/components/SellBanner";
 import BrandPlaylist, { PlaylistData } from "@/components/BrandPlaylist";
@@ -24,21 +23,6 @@ export const metadata: Metadata = {
 // ============================================
 // MOCK DATA
 // ============================================
-
-// Featured Article for Trending News
-const FEATURED_ARTICLE: NewsArticle & { fullContent?: string } = {
-  id: "1",
-  slug: "konga-fm-launches-new-morning-show",
-  category: "News",
-  title: "Konga FM Launches Exciting New Morning Show",
-  excerpt:
-    "Discover the latest additions to our radio lineup with dynamic hosts and engaging content.",
-  date: "Mar 10, 2026",
-  readTime: "5 mins read",
-  imageUrl: "/morningInspiration.png",
-  fullContent:
-    "Konga FM is thrilled to announce the launch of our new morning show, bringing you the most engaging content to start your day right. With dynamic hosts, interactive segments, and exclusive interviews, this promises to be radio's most exciting morning program.",
-};
 
 // FM Show Timeline Mock Data
 const FM_SHOWS: ShowCard[] = [
@@ -425,9 +409,6 @@ export default function Home() {
         variant="fm"
       />
 
-      {/* Trending News Section */}
-      <TrendingNews article={FEATURED_ARTICLE} />
-
       {/* TV Show Timeline Section */}
       <TVShowTimeline
         title="TV Show Timeline"
@@ -436,8 +417,8 @@ export default function Home() {
         variant="tv"
       />
 
-      {/* News Grid Section */}
-      <NewsGrid />
+      {/* News Section - Featured + Sidebar */}
+      <NewsGrid title="Latest News" viewAllLink="/news" />
 
       {/* Product/Videos Showcase Section */}
       <ProductShowcase

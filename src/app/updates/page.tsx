@@ -1,8 +1,9 @@
 "use client";
 
 import { useState, useMemo, useEffect } from "react";
+import Link from "next/link";
 import UpdatesHero from "@/components/UpdatesHero";
-import NewsGrid, { NewsArticle } from "@/components/NewsGrid";
+import { NewsArticle } from "@/components/NewsGrid";
 import NewsSkeleton from "@/components/NewsSkeleton";
 import FilterBar, { FilterCategory } from "@/components/FilterBar";
 import styles from "./page.module.scss";
@@ -188,7 +189,32 @@ export default function UpdatesPage() {
           </div>
 
           {/* News Grid or Skeleton */}
-          {isLoading ? <NewsSkeleton count={filteredArticles.length} /> : <NewsGrid articles={filteredArticles} />}
+          {isLoading ? (
+            <NewsSkeleton count={filteredArticles.length} />
+          ) : (
+            <div className={styles.articlesGrid}>
+              {filteredArticles.map((article) => (
+                <Link
+                  key={article.id}
+                  href={`/updates/${article.slug}`}
+                  className={styles.newsCard}
+                >
+                  <div className={styles.cardImage}>
+                    <img src={article.imageUrl} alt={article.title} />
+                  </div>
+                  <div className={styles.cardContent}>
+                    <span className={styles.category}>{article.category}</span>
+                    <h3 className={styles.cardTitle}>{article.title}</h3>
+                    <p className={styles.cardExcerpt}>{article.excerpt}</p>
+                    <div className={styles.cardMeta}>
+                      <span>{article.date}</span>
+                      {article.readTime && <span>• {article.readTime}</span>}
+                    </div>
+                  </div>
+                </Link>
+              ))}
+            </div>
+          )}
         </div>
       </section>
     </main>
