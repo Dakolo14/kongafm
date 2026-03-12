@@ -42,27 +42,38 @@ const DEFAULT_NEWS_DATA = {
     {
       id: "news-side-1",
       imageUrl:
-        "https://images.unsplash.com/photo-1492684223066-81342ee5ff30?w=200&h=200&fit=crop",
-      title: "Burna Boy Announces African Tour",
+        "https://www.bellanaija.com/wp-content/uploads/2025/09/FEATURED-IMAGE-2-2048x1365.jpeg",
+      title: "Zinox, KongaCares launch ‘Computerise Nigeria Initiative’ to equip 1m students with laptops",
       description:
-        "Music powerhouse Burna Boy has officially announced dates for his highly anticipated African tour, promising electric performances.",
-      category: "Music",
-      date: "January 11, 2026",
-      link: "/news/burna-tour",
+        "Zinox Technologies, Nigeria’s leading integrated ICT powerhouse, in partnership with KongaCares, the Corporate Social Responsibility arm of Konga Group, has launched the Computerise Nigeria Initiative, a bold nationwide programme designed to bridge Nigeria’s digital education gap. This initiative is designed to equip one million young Nigerians with personal computers, digital tools, and practical skills for the future of work.",
+      category: "News",
+      date: "September 10, 2025",
+      link: "https://www.bellanaija.com/2025/09/zinox-kongacares-launch/",
     }, 
     {
       id: "news-side-2",
       imageUrl:
-        "https://images.unsplash.com/photo-1511379938547-c1f69b13d835?w=200&h=200&fit=crop",
-      title: "Wizkid Releases New Album",
+        "https://www.bellanaija.com/wp-content/uploads/2025/09/SAMSUNG-STAFF-AT-KONGA103.7FM-STUDIOS-1.jpg",
+      title: "Konga103.7FM spotlights new Samsung Galaxy Z Series",
       description:
-        "Fans are in a frenzy as Wizkid drops his surprise album featuring collaborations with international stars.",
-      category: "Music",
-      date: "January 10, 2026",
-      link: "/news/wizkid-album",
+        "Samsung has officially launched its latest line of flagship smartphones: the Galaxy Fold 7, Flip 7, and Flip 7 FE.",
+      category: "Promotions",
+      date: "September 2, 2025",
+      link: "https://www.bellanaija.com/2025/09/konga-103-7fm-and-samsung/",
     },
     {
       id: "news-side-3",
+      imageUrl:
+        "https://images.unsplash.com/photo-1487180144351-b8472da7d491?w=200&h=200&fit=crop",
+      title: "Afrobeats Grammy Nominations",
+      description:
+        "A record number of Afrobeats artists have been nominated for this year's Grammy Awards, signaling global dominance.",
+      category: "Awards",
+      date: "January 9, 2026",
+      link: "/news/grammy-noms",
+    },
+    {
+      id: "news-side-4",
       imageUrl:
         "https://images.unsplash.com/photo-1487180144351-b8472da7d491?w=200&h=200&fit=crop",
       title: "Afrobeats Grammy Nominations",

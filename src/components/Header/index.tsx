@@ -39,7 +39,7 @@ export default function Header() {
       {/* ========================================= */}
 
       {/* Top Pink Banner */}
-      <div className={styles.topBanner}>
+      <Link href="/" className={styles.topBanner}>
         <Image
           src="/kongacommlogo.png"
           alt="Konga Comms Logo"
@@ -47,13 +47,13 @@ export default function Header() {
           height={65}
           className={styles.bannerLogo}
         />
-      </div>
+      </Link>
 
       {/* Navigation Bar */}
       <nav className={styles.navbar}>
         <div className={styles.navContainer}>
           {/* Logo/Branding Section */}
-          <div className={styles.branding}>
+          <Link href="/" className={styles.branding}>
             <div className={styles.radioIcon}>
               <Image
                 src="/konga-icon.png"
@@ -67,14 +67,14 @@ export default function Header() {
               <div className={styles.tuneInLabel}>TUNE IN NOW!</div>
               <div className={styles.stationName}>Konga FM 103.7</div>
             </div>
-            <button 
-              className={styles.playButton}
-              onClick={() => setIsPlaying(!isPlaying)}
-              aria-label={isPlaying ? "Pause" : "Play"}
-            >
-              {isPlaying ? "⏸" : "▶"}
-            </button>
-          </div>
+          </Link>
+          <button 
+            className={styles.playButton}
+            onClick={() => setIsPlaying(!isPlaying)}
+            aria-label={isPlaying ? "Pause" : "Play"}
+          >
+            {isPlaying ? "⏸" : "▶"}
+          </button>
 
           {/* Navigation Links */}
           <ul className={styles.navLinks}>
@@ -97,7 +97,7 @@ export default function Header() {
       {/* ========================================= */}
 
       <div className={styles.mobileHeader}>
-        <div className={styles.mobileBranding}>
+        <Link href="/" className={styles.mobileBranding}>
           <div className={styles.mobileIcon}>
             <Image
               src="/konga-icon.png"
@@ -110,15 +110,15 @@ export default function Header() {
             <span className={styles.mobileLabel}>TUNE IN NOW!</span>
             <span className={styles.mobileName}>Konga FM 103.7</span>
           </div>
-          <button 
-            className={styles.mobilePlay}
-            onClick={() => setIsPlaying(!isPlaying)}
-            aria-label={isPlaying ? "Pause" : "Play"}
-            title={isPlaying ? "Pause" : "Play"}
-          >
-            {isPlaying ? "⏸" : "▶"}
-          </button>
-        </div>
+        </Link>
+        <button 
+          className={styles.mobilePlay}
+          onClick={() => setIsPlaying(!isPlaying)}
+          aria-label={isPlaying ? "Pause" : "Play"}
+          title={isPlaying ? "Pause" : "Play"}
+        >
+          {isPlaying ? "⏸" : "▶"}
+        </button>
 
         <button
           className={`${styles.hamburger} ${menuOpen ? styles.open : ""}`}
@@ -134,7 +134,7 @@ export default function Header() {
       {/* Mobile Menu Slide-out */}
       <div className={`${styles.mobileMenu} ${menuOpen ? styles.open : ""}`}>
         <div className={styles.sidebarHeader}>
-          <div className={styles.sidebarBrand}>
+          <Link href="/" className={styles.sidebarBrand} onClick={() => setMenuOpen(false)}>
             <Image
               src="/konga-icon.png"
               alt="Konga FM"
@@ -143,7 +143,7 @@ export default function Header() {
               className={styles.sidebarIcon}
             />
             <span className={styles.sidebarTitle}>Konga FM</span>
-          </div>
+          </Link>
           <button
             className={styles.closeBtn}
             onClick={() => setMenuOpen(false)}
