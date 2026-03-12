@@ -44,6 +44,7 @@
 // Responsive image variants
 .mobileImage {
   display: none;
+  aspect-ratio: 2 / 1;
 
   @media (max-width: 1024px) {
     display: block;
@@ -52,6 +53,7 @@
 
 .desktopImage {
   display: block;
+  aspect-ratio: 16 / 4;
 
   @media (max-width: 1024px) {
     display: none;
