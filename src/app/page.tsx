@@ -365,7 +365,7 @@ export default function Home() {
       <ProductShowcase
         title="Product Showcase Videos"
         videos={PRODUCTS}
-        viewAllLink="/videos"
+        viewAllLink="/product-showcase"
       />
 
       {/* Events Section */}
