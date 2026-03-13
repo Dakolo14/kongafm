@@ -25,9 +25,9 @@ const defaultTalents: Talent[] = [
   {
     id: 2,
     imageUrl: "/talents/ayojimi.png",
-    name: "Ayo Jimi",
+    name: "Ayodele Olujimi",
     role: "Head of KongaTV",
-    profileUrl: "/talents/ayo-jimi",
+    profileUrl: "/talents/ayodele",
   },
   {
     id: 3,
@@ -56,6 +56,13 @@ const defaultTalents: Talent[] = [
     name: "Bill Nelson",
     role: "Motion Graphics Designer",
     profileUrl: "/talents/bill-nelson",
+  },
+  {
+    id: 7,
+    imageUrl: "/talents/iyobosa.png",
+    name: "Iyobosa Victory Osahon",
+    role: "Radio Host & Entertainment Expert",
+    profileUrl: "/talents/iyobosa",
   },
 ];
 
