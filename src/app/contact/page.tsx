@@ -35,8 +35,11 @@ export default function ContactPage() {
               </div>
               <div className={styles.infoContent}>
                 <h3 className={styles.infoTitle}>Phone</h3>
-                <a href="tel:07007000000" className={styles.infoLink}>
-                  0700 700 0000
+                <a href="tel:+2349118461482" className={styles.infoLink}>
+                  0911 846 1482
+                </a>
+                <a href="tel:+2348035859139" className={styles.infoLink}>
+                  0803 585 9139
                 </a>
               </div>
             </div>
@@ -51,8 +54,27 @@ export default function ContactPage() {
               </div>
               <div className={styles.infoContent}>
                 <h3 className={styles.infoTitle}>Email</h3>
-                <a href="mailto:info@kongacommunications.com" className={styles.infoLink}>
-                  info@kongacommunications.com
+                <a href="mailto:info@kongatv.com" className={styles.infoLink}>
+                  info@kongatv.com
+                </a>
+                <a href="mailto:info@kongafm.com" className={styles.infoLink}>
+                  info@kongafm.com
+                </a>
+              </div>
+            </div>
+
+            {/* Website */}
+            <div className={styles.infoCard}>
+              <div className={styles.infoIcon}>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                  <circle cx="12" cy="12" r="10" />
+                  <path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" />
+                </svg>
+              </div>
+              <div className={styles.infoContent}>
+                <h3 className={styles.infoTitle}>Website</h3>
+                <a href="https://www.kongafm.com" className={styles.infoLink}>
+                  www.kongafm.com
                 </a>
               </div>
             </div>
@@ -68,7 +90,7 @@ export default function ContactPage() {
               <div className={styles.infoContent}>
                 <h3 className={styles.infoTitle}>Location</h3>
                 <p className={styles.infoText}>
-                  No 3b Town Planning Way, Ilupeju, Lagos
+                  No. 1, Redemption Crescent, Gbagada, Lagos, Nigeria
                 </p>
               </div>
             </div>
@@ -77,7 +99,7 @@ export default function ContactPage() {
           {/* Map */}
           <div className={styles.mapContainer}>
             <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3963.2088137899043!2d3.3876!3d6.5518!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x103b9321c97df0cd%3A0x1234567890abc!2sNo%203b%20Town%20Planning%20Way%2C%20Ilupeju%2C%20Lagos!5e0!3m2!1sen!2sng!4v1234567890123"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3962.8896341234567!2d3.3452!3d6.6289!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x103b8c7d1234567!2sNo%201%20Redemption%20Crescent%2C%20Gbagada%2C%20Lagos!5e0!3m2!1sen!2sng!4v1234567890123"
               width="100%"
               height="400"
               style={{ border: 0 }}
