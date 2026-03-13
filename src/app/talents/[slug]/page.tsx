@@ -41,7 +41,7 @@ const mockTalentData: Record<string, TalentProfile> = {
       {
         id: "1",
         title: "The Scoop",
-        thumbnailUrl: "/TVShows/KTV - Scoop.png",
+        thumbnailUrl: "/FMShows/The SCoop.png",
         schedule: "Weekdays",
       },
       {
@@ -74,13 +74,13 @@ const mockTalentData: Record<string, TalentProfile> = {
       {
         id: "1",
         title: "Beyond The Headlines",
-        thumbnailUrl: "",
+        thumbnailUrl: "/FMShows/Beyond The Headlines.png",
         schedule: "Weekdays",
       },
       {
         id: "2",
         title: "Reason This",
-        thumbnailUrl: "",
+        thumbnailUrl: "/TVShows/Reason This.png",
         schedule: "Weekly",
       },
     ],
@@ -134,7 +134,7 @@ const mockTalentData: Record<string, TalentProfile> = {
       {
         id: "2",
         title: "Creators Corner",
-        thumbnailUrl: "",
+        thumbnailUrl: "/FMShows/Creators Corner.png",
         schedule: "Weekly",
       },
       {
@@ -182,7 +182,7 @@ const mockTalentData: Record<string, TalentProfile> = {
       {
         id: "1",
         title: "Cruise Control",
-        thumbnailUrl: "",
+        thumbnailUrl: "/FMShows/Cruise Control.png",
         schedule: "Weekdays",
       },
       {
