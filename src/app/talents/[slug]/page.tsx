@@ -41,19 +41,19 @@ const mockTalentData: Record<string, TalentProfile> = {
       {
         id: "1",
         title: "The Scoop",
-        thumbnailUrl: "/shows/the-scoop.png",
+        thumbnailUrl: "",
         schedule: "Weekdays",
       },
       {
         id: "2",
         title: "The Book Review",
-        thumbnailUrl: "/shows/the-book-review.png",
+        thumbnailUrl: "",
         schedule: "Weekly",
       },
       {
         id: "3",
         title: "Diva's Diary",
-        thumbnailUrl: "/shows/divas-diary.png",
+        thumbnailUrl: "",
         schedule: "Weekly",
       },
     ],
@@ -64,7 +64,7 @@ const mockTalentData: Record<string, TalentProfile> = {
     name: "Ayodele Olujimi",
     role: "Broadcast Journalist & Host",
     bio: "Ayodele Olujimi is an accomplished broadcast journalist with expertise in news coverage and current affairs programming. Known for his dynamic presence and incisive interviewing style.",
-    imageUrl: "/talents/ayodele.png",
+    imageUrl: "/talents/ayojimi.png",
     socials: {
       twitter: "https://twitter.com",
       instagram: "https://instagram.com",
@@ -74,13 +74,13 @@ const mockTalentData: Record<string, TalentProfile> = {
       {
         id: "1",
         title: "Beyond The Headlines",
-        thumbnailUrl: "/shows/beyond-the-headlines.png",
+        thumbnailUrl: "",
         schedule: "Weekdays",
       },
       {
         id: "2",
         title: "Reason This",
-        thumbnailUrl: "/shows/reason-this.png",
+        thumbnailUrl: "",
         schedule: "Weekly",
       },
     ],
@@ -101,13 +101,13 @@ const mockTalentData: Record<string, TalentProfile> = {
       {
         id: "1",
         title: "Morning Inspiration",
-        thumbnailUrl: "/shows/morning-inspiration.png",
+        thumbnailUrl: "",
         schedule: "Weekdays",
       },
       {
         id: "2",
         title: "The Market Square",
-        thumbnailUrl: "/shows/the-market-square.png",
+        thumbnailUrl: "",
         schedule: "Weekly",
       },
     ],
@@ -128,19 +128,19 @@ const mockTalentData: Record<string, TalentProfile> = {
       {
         id: "1",
         title: "Juice Box",
-        thumbnailUrl: "/shows/juice-box.png",
+        thumbnailUrl: "",
         schedule: "Weekdays",
       },
       {
         id: "2",
         title: "Creators Corner",
-        thumbnailUrl: "/shows/creators-corner.png",
+        thumbnailUrl: "",
         schedule: "Weekly",
       },
       {
         id: "3",
         title: "KongaFM Top 10 Countdown",
-        thumbnailUrl: "/shows/top-10-countdown.png",
+        thumbnailUrl: "",
         schedule: "Weekly",
       },
     ],
@@ -161,7 +161,7 @@ const mockTalentData: Record<string, TalentProfile> = {
       {
         id: "1",
         title: "Civic Centre",
-        thumbnailUrl: "/shows/civic-centre.png",
+        thumbnailUrl: "",
         schedule: "Weekly",
       },
     ],
@@ -182,25 +182,25 @@ const mockTalentData: Record<string, TalentProfile> = {
       {
         id: "1",
         title: "Cruise Control",
-        thumbnailUrl: "/shows/cruise-control.png",
+        thumbnailUrl: "",
         schedule: "Weekdays",
       },
       {
         id: "2",
         title: "Movie Review",
-        thumbnailUrl: "/shows/movie-review.png",
+        thumbnailUrl: "",
         schedule: "Weekly",
       },
       {
         id: "3",
         title: "Gospel Countdown",
-        thumbnailUrl: "/shows/gospel-countdown.png",
+        thumbnailUrl: "",
         schedule: "Weekly",
       },
       {
         id: "4",
         title: "Juice Box",
-        thumbnailUrl: "/shows/juice-box.png",
+        thumbnailUrl: "",
         schedule: "Co-hosting",
       },
     ],
@@ -319,14 +319,6 @@ export default function TalentProfilePage() {
           <div className={styles.showsGrid}>
             {talent.shows.map((show) => (
               <div key={show.id} className={styles.showCard}>
-                <div className={styles.showThumbnail}>
-                  <Image
-                    src={show.thumbnailUrl}
-                    alt={show.title}
-                    fill
-                    style={{ objectFit: "cover" }}
-                  />
-                </div>
                 <div className={styles.showInfo}>
                   <h3 className={styles.showTitle}>{show.title}</h3>
                   <p className={styles.showSchedule}>{show.schedule}</p>
