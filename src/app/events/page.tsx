@@ -42,15 +42,6 @@ const EVENTS_DATA: EventItem[] = [
 export default function EventsPage() {
   return (
     <main className={styles.eventsPage}>
-      {/* Hero Section */}
-      <section className={styles.hero}>
-        <div className={styles.heroContent}>
-          <h1 className={styles.heroTitle}>Past Events</h1>
-          <p className={styles.heroDescription}>
-            Watch all our exclusive event coverage, interviews, and behind-the-scenes content from Konga FM and KTV.
-          </p>
-        </div>
-      </section>
 
       {/* Events Grid */}
       <section className={styles.eventsSection}>

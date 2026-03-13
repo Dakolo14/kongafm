@@ -71,26 +71,6 @@
 }
 
 .eventsSection {
-  padding: 20px 40px 60px 40px;
+  padding: 0;
   background-color: #26010f;
-
-  @media (min-width: 1441px) {
-    padding: 40px 60px 80px 60px;
-  }
-
-  @media (min-width: 1920px) {
-    padding: 60px 80px 100px 80px;
-  }
-
-  @media (min-width: 2560px) {
-    padding: 80px 100px 120px 100px;
-  }
-
-  @media (max-width: 1024px) {
-    padding: 30px 30px 50px 30px;
-  }
-
-  @media (max-width: 768px) {
-    padding: 20px 20px 40px 20px;
-  }
 }

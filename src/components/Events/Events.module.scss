@@ -1,9 +1,9 @@
 .eventsSection {
-  padding: 60px 0 40px 0;
+  padding: 60px 40px 40px 40px;
   background-color: #26010f; // Consistent dark bg
 
   @media (max-width: 768px) {
-    padding: 40px 0;
+    padding: 40px 20px;
   }
 }
 
@@ -54,13 +54,13 @@
   display: grid;
   grid-template-columns: repeat(3, 1fr); // Desktop: 3 Larger cards for events
   gap: 32px;
-  padding: 18px 12px; // Matching padding
+  padding: 0; // Remove internal padding - let page control it
 
   // Mobile: Vertical Stack
   @media (max-width: 1024px) {
     grid-template-columns: 1fr;
     gap: 24px;
-    padding: 10px 16px;
+    padding: 0;
   }
 }
 
