@@ -39,7 +39,7 @@ export default function Header() {
       {/* ========================================= */}
 
       {/* Top Pink Banner */}
-      <div className={styles.topBanner}>
+      <Link href="/" className={styles.topBanner}>
         <Image
           src="/kongacommlogo.png"
           alt="Konga Comms Logo"
@@ -47,7 +47,7 @@ export default function Header() {
           height={65}
           className={styles.bannerLogo}
         />
-      </div>
+      </Link>
 
       {/* Navigation Bar */}
       <nav className={styles.navbar}>
