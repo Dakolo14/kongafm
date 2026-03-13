@@ -29,8 +29,8 @@ const mockTalentData: Record<string, TalentProfile> = {
     id: "1",
     slug: "ifeoma",
     name: "Ifeoma Ajumobi",
-    role: "Heads Konga Communications",
-    bio: "Popularly known as IfyMelody, Your Sparkling Woman on Air, Ify is a passionate and experienced Broadcast Journalist (TV & Radio). She Heads Konga Communications, which houses KongaTV and Konga103.7FM. She has worked with various media houses with a major focus on business, marketing, advertising and Entrepreneurship. She is very bold, creative and resilient. A sonorous voice anchoring THE SCOOP and THE BOOK SHOW on Konga103.7fm and KongaTV Ify Melody has received several trainings in Broadcast Journalism.",
+    role: "Broadcast Journalist & Host",
+    bio: "Popularly known as IfyMelody, Your Sparkling Woman on Air, Ify is a passionate and experienced Broadcast Journalist (TV & Radio). She is a versatile broadcast professional known for her engaging presentation style and deep expertise in entertainment and lifestyle content.",
     imageUrl: "/talents/ifeoma.png",
     socials: {
       twitter: "https://twitter.com",
@@ -42,49 +42,55 @@ const mockTalentData: Record<string, TalentProfile> = {
         id: "1",
         title: "The Scoop",
         thumbnailUrl: "/shows/the-scoop.png",
-        schedule: "Weekdays, 8:00 AM",
+        schedule: "Weekdays",
       },
       {
         id: "2",
-        title: "The Book Show",
-        thumbnailUrl: "/shows/the-book-show.png",
-        schedule: "Saturdays, 10:00 AM",
+        title: "The Book Review",
+        thumbnailUrl: "/shows/the-book-review.png",
+        schedule: "Weekly",
+      },
+      {
+        id: "3",
+        title: "Diva's Diary",
+        thumbnailUrl: "/shows/divas-diary.png",
+        schedule: "Weekly",
       },
     ],
   },
-  "ayo-jimi": {
+  ayodele: {
     id: "2",
-    slug: "ayo-jimi",
-    name: "Ayo Jimi",
-    role: "Head Of KongaTV",
-    bio: "PocketNomist as he is known online and on the airwaves, Ayo serves as the Head Of KongaTV. With over two decades of professional practice in the media space, cutting across Broadcast, Designs, & Brand Management, he doubles as the Content/Brand Manager for Konga Communications (both radio and TV). To listen to him as an analyst is to come in contact with unusual depth, humor & streetlevel Economics that simplifies concepts and leaves the listener or viewer informed & smarter.",
-    imageUrl: "/talents/ayojimi.png",
+    slug: "ayodele",
+    name: "Ayodele Olujimi",
+    role: "Broadcast Journalist & Host",
+    bio: "Ayodele Olujimi is an accomplished broadcast journalist with expertise in news coverage and current affairs programming. Known for his dynamic presence and incisive interviewing style.",
+    imageUrl: "/talents/ayodele.png",
     socials: {
       twitter: "https://twitter.com",
       instagram: "https://instagram.com",
       linkedin: "https://linkedin.com",
     },
     shows: [
-        {
+      {
         id: "1",
-        title: "The Scoop",
-        thumbnailUrl: "/shows/the-scoop.png",
-        schedule: "Weekdays, 8:00 AM",
+        title: "Beyond The Headlines",
+        thumbnailUrl: "/shows/beyond-the-headlines.png",
+        schedule: "Weekdays",
       },
       {
         id: "2",
-        title: "The Book Show",
-        thumbnailUrl: "/shows/the-book-show.png",
-        schedule: "Saturdays, 10:00 AM",
+        title: "Reason This",
+        thumbnailUrl: "/shows/reason-this.png",
+        schedule: "Weekly",
       },
     ],
   },
   lilian: {
     id: "3",
     slug: "lilian",
-    name: "Lilian Duru-Valentine",
-    role: "Acting Radio Head of Konga103.7 FM",
-    bio: "Lilian Duru-Valentine (LDV) is a TV and multiple award-winning broadcaster, and the Acting Radio Head of Konga103.7 FM. She is a trusted voice on Konga FM/TV, inspiring listeners daily on Morning Inspiration and giving entrepreneurs a platform on The Market Square. A versatile media professional, she blends faith, business, and storytelling with excellence. She is also an experienced Comperere, Red Carpet Host, and a huge proponent of Being More — a life philosophy that drives her to inspire others toward growth, purpose, and impact.",
+    name: "Lilian Duru Valentine",
+    role: "Radio Host & Business Advocate",
+    bio: "Lilian Duru-Valentine is a TV and radio broadcaster, and a trusted voice on Konga FM, inspiring listeners daily on Morning Inspiration and giving entrepreneurs a platform on The Market Square. A versatile media professional, she blends faith, business, and storytelling with excellence.",
     imageUrl: "/talents/lilian.png",
     socials: {
       twitter: "https://twitter.com",
@@ -92,26 +98,26 @@ const mockTalentData: Record<string, TalentProfile> = {
       linkedin: "https://linkedin.com",
     },
     shows: [
-        {
+      {
         id: "1",
-        title: "The Scoop",
-        thumbnailUrl: "/shows/the-scoop.png",
-        schedule: "Weekdays, 8:00 AM",
+        title: "Morning Inspiration",
+        thumbnailUrl: "/shows/morning-inspiration.png",
+        schedule: "Weekdays",
       },
       {
         id: "2",
-        title: "The Book Show",
-        thumbnailUrl: "/shows/the-book-show.png",
-        schedule: "Saturdays, 10:00 AM",
+        title: "The Market Square",
+        thumbnailUrl: "/shows/the-market-square.png",
+        schedule: "Weekly",
       },
     ],
   },
   fred: {
     id: "4",
     slug: "fred",
-    name: "Fred Otueze Jr.",
-    role: "OAP at KongaTV",
-    bio: "Fred Otueze is a media professional, broadcaster, and creative innovator. He has built a reputation for shaping engaging stories, driving impactful projects, and pushing the boundaries of media and content creation. He currently serves as an OAP at KongaTV. Beyond broadcasting, Fred's creativity extends into community-driven storytelling. In 2024, he won the PitchIt competition at the Sony Alpha Festival Naija with his groundbreaking project Bus Stop Stories—an initiative that transforms bus stops into cultural storytelling hubs, celebrating Nigeria's heritage and everyday narratives. He is the hyper-energetic voice on Creators Corner & Konga Top10.",
+    name: "Fred Otueze",
+    role: "Broadcast Journalist & Creative Innovator",
+    bio: "Fred Otueze is a media professional, broadcaster, and creative innovator. He has built a reputation for shaping engaging stories and driving impactful projects. He is the hyper-energetic voice bringing excitement to listeners across multiple platforms.",
     imageUrl: "/talents/fred.png",
     socials: {
       twitter: "https://twitter.com",
@@ -119,26 +125,32 @@ const mockTalentData: Record<string, TalentProfile> = {
       linkedin: "https://linkedin.com",
     },
     shows: [
-        {
+      {
         id: "1",
-        title: "The Scoop",
-        thumbnailUrl: "/shows/the-scoop.png",
-        schedule: "Weekdays, 8:00 AM",
+        title: "Juice Box",
+        thumbnailUrl: "/shows/juice-box.png",
+        schedule: "Weekdays",
       },
       {
         id: "2",
-        title: "The Book Show",
-        thumbnailUrl: "/shows/the-book-show.png",
-        schedule: "Saturdays, 10:00 AM",
+        title: "Creators Corner",
+        thumbnailUrl: "/shows/creators-corner.png",
+        schedule: "Weekly",
+      },
+      {
+        id: "3",
+        title: "KongaFM Top 10 Countdown",
+        thumbnailUrl: "/shows/top-10-countdown.png",
+        schedule: "Weekly",
       },
     ],
   },
   stanley: {
     id: "5",
     slug: "stanley",
-    name: "Stanley Chizaram Ikeije",
+    name: "Stanley Chizaram",
     role: "TV & Radio Producer, Host & Actor",
-    bio: "Stanley Chizaram Ikeije is an experienced TV and Radio Producer, Host, and Actor. He creates engaging, high-quality programs and drives successful marketing and promotional strategies. From concept to post-production, he manages productions seamlessly—overseeing budgets, teams, and resources to deliver outstanding results.",
+    bio: "Stanley Chizaram Ikeije is an experienced TV and Radio Producer, Host, and Actor. He creates engaging, high-quality programs and drives successful marketing and promotional strategies. From concept to post-production, he manages productions seamlessly.",
     imageUrl: "/talents/stanley.png",
     socials: {
       twitter: "https://twitter.com",
@@ -146,51 +158,57 @@ const mockTalentData: Record<string, TalentProfile> = {
       linkedin: "https://linkedin.com",
     },
     shows: [
-        {
-        id: "1",
-        title: "The Scoop",
-        thumbnailUrl: "/shows/the-scoop.png",
-        schedule: "Weekdays, 8:00 AM",
-      },
       {
-        id: "2",
-        title: "The Book Show",
-        thumbnailUrl: "/shows/the-book-show.png",
-        schedule: "Saturdays, 10:00 AM",
+        id: "1",
+        title: "Civic Centre",
+        thumbnailUrl: "/shows/civic-centre.png",
+        schedule: "Weekly",
       },
     ],
   },
-  "bill-nelson": {
+  iyobosa: {
     id: "6",
-    slug: "bill-nelson",
-    name: "Bill Nelson",
-    role: "OAP, Motion Graphics Designer & Voice Over Artiste",
-    bio: "A seasoned On-Air Personality, Professional Motion Graphics Designer, and Voice Over Artiste. He embodies the perfect blend of creativity, technical expertise, and professionalism. With a passion for storytelling and a keen eye for details, he has built a reputation delivering high-quality content that captivates audiences and drives results. In the world of broadcasting, his on-air presence is warm, engaging, and authentic, making him a standard figure in the industry. But behind the scenes, his skills extend far beyond hosting. As a motion graphics designer, his voice over work is equally impressive, with a range that spans from smooth narration to energetic commercials.",
-    imageUrl: "/talents/nelson.png",
+    slug: "iyobosa",
+    name: "Iyobosa Victory Osahon",
+    role: "Radio Host & Entertainment Expert",
+    bio: "Iyobosa Victory Osahon is a talented broadcast professional known for her engaging presentation and expertise in lifestyle, entertainment, and music programming. She brings energy and authenticity to every show she hosts.",
+    imageUrl: "/talents/iyobosa.png",
     socials: {
       twitter: "https://twitter.com",
       instagram: "https://instagram.com",
       linkedin: "https://linkedin.com",
     },
     shows: [
-        {
+      {
         id: "1",
-        title: "The Scoop",
-        thumbnailUrl: "/shows/the-scoop.png",
-        schedule: "Weekdays, 8:00 AM",
+        title: "Cruise Control",
+        thumbnailUrl: "/shows/cruise-control.png",
+        schedule: "Weekdays",
       },
       {
         id: "2",
-        title: "The Book Show",
-        thumbnailUrl: "/shows/the-book-show.png",
-        schedule: "Saturdays, 10:00 AM",
+        title: "Movie Review",
+        thumbnailUrl: "/shows/movie-review.png",
+        schedule: "Weekly",
+      },
+      {
+        id: "3",
+        title: "Gospel Countdown",
+        thumbnailUrl: "/shows/gospel-countdown.png",
+        schedule: "Weekly",
+      },
+      {
+        id: "4",
+        title: "Juice Box",
+        thumbnailUrl: "/shows/juice-box.png",
+        schedule: "Co-hosting",
       },
     ],
   },
 };
 
 // Talent order for "View Next" navigation
-const talentOrder = ["ifeoma", "ayo-jimi", "lilian", "fred", "stanley", "bill-nelson"];
+const talentOrder = ["ifeoma", "ayodele", "lilian", "fred", "stanley", "iyobosa"];
 
 export default function TalentProfilePage() {
   const params = useParams();

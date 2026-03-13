@@ -37,6 +37,33 @@ const EVENTS_DATA: EventItem[] = [
     status: "Past",
     link: "#",
   },
+  {
+    id: "event-4",
+    title: "Creation Africa",
+    youtubeId: "qvFkPGr1ZAU",
+    date: { month: "MAR", day: "16" },
+    time: "Full Episode",
+    status: "Past",
+    link: "#",
+  },
+  {
+    id: "event-5",
+    title: "L'Oreal Event",
+    youtubeId: "qE3cXZNF19M",
+    date: { month: "MAR", day: "17" },
+    time: "Full Episode",
+    status: "Past",
+    link: "#",
+  },
+  {
+    id: "event-6",
+    title: "Samsung",
+    youtubeId: "cNia-e7nFZY",
+    date: { month: "MAR", day: "18" },
+    time: "Full Episode",
+    status: "Past",
+    link: "#",
+  },
 ];
 
 export default function EventsPage() {
