@@ -1,11 +1,12 @@
 "use client";
 
-import React from "react";
+import React, { useState } from "react";
 import styles from "./Events.module.scss";
 
 export interface EventItem {
   id: string;
-  imageUrl: string;
+  imageUrl?: string;
+  youtubeId?: string; // For YouTube video thumbnails
   title: string;
   date: {
     month: string; // "MAY"
@@ -25,6 +26,21 @@ export interface EventsProps {
 const Events: React.FC<EventsProps> = ({ title, events, viewAllLink }) => {
   // Limit to first 3 events for the homepage preview
   const displayedEvents = events.slice(0, 3);
+  const [selectedVideo, setSelectedVideo] = useState<string | null>(null);
+
+  const handleVideoClick = (e: React.MouseEvent<HTMLAnchorElement>, youtubeId?: string) => {
+    if (youtubeId) {
+      e.preventDefault();
+      setSelectedVideo(youtubeId);
+    }
+  };
+
+  // Get image URL - either from imageUrl or generate from youtubeId
+  const getImageUrl = (event: EventItem) => {
+    if (event.imageUrl) return event.imageUrl;
+    if (event.youtubeId) return `https://img.youtube.com/vi/${event.youtubeId}/maxresdefault.jpg`;
+    return "";
+  };
 
   return (
     <section className={styles.eventsSection}>
@@ -42,12 +58,13 @@ const Events: React.FC<EventsProps> = ({ title, events, viewAllLink }) => {
           <a
             key={event.id}
             href={event.link}
+            onClick={(e) => handleVideoClick(e, event.youtubeId)}
             className={styles.card}
             aria-label={`View event: ${event.title}`}
           >
             <div className={styles.imageWrapper}>
               <img
-                src={event.imageUrl}
+                src={getImageUrl(event)}
                 alt={event.title}
                 className={styles.image}
               />
@@ -94,6 +111,32 @@ const Events: React.FC<EventsProps> = ({ title, events, viewAllLink }) => {
           </a>
         ))}
       </div>
+
+      {/* YouTube Video Modal */}
+      {selectedVideo && (
+        <div
+          className={styles.modal}
+          onClick={() => setSelectedVideo(null)}
+        >
+          <div className={styles.modalContent} onClick={(e) => e.stopPropagation()}>
+            <button
+              className={styles.closeButton}
+              onClick={() => setSelectedVideo(null)}
+              aria-label="Close video player"
+            >
+              ✕
+            </button>
+            <iframe
+              width="100%"
+              height="100%"
+              src={`https://www.youtube.com/embed/${selectedVideo}?autoplay=1&modestbranding=1`}
+              title="YouTube Video Player"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+            />
+          </div>
+        </div>
+      )}
     </section>
   );
 };

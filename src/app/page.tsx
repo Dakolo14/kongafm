@@ -205,47 +205,34 @@ const PRODUCTS: ProductItem[] = [
   },
 ];
 
-// Events Data
+// Events Data - YouTube Videos with Event Design
 const EVENTS_DATA: EventItem[] = [
   {
     id: "event-1",
-    title: "Partnership with Konga",
-    imageUrl:
-      "https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=600&h=400&fit=crop",
-    date: { month: "MAY", day: "20" },
-    time: "10:00 AM",
-    status: "Free",
-    link: "/events/partnership",
+    title: "Konga FM & KTV Highlights",
+    youtubeId: "EW7hynK33ec",
+    date: { month: "MAR", day: "13" },
+    time: "Live Now",
+    status: "Live",
+    link: "#",
   },
   {
     id: "event-2",
-    title: "Harvesters Awakening",
-    imageUrl:
-      "https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=600&h=400&fit=crop",
-    date: { month: "SEP", day: "04" },
-    time: "6:00 PM",
+    title: "Entertainment Coverage",
+    youtubeId: "sSgBgV9YA3I",
+    date: { month: "MAR", day: "14" },
+    time: "10:00 AM",
     status: "Upcoming",
-    link: "/events/awakening",
+    link: "#",
   },
   {
     id: "event-3",
-    title: "Konga Tech Summit 2026",
-    imageUrl:
-      "https://images.unsplash.com/photo-1514320291840-2e0a9bf2a9ae?w=600&h=400&fit=crop",
-    date: { month: "JUN", day: "12" },
-    time: "9:00 AM",
+    title: "Studio Sessions & Behind the Scenes",
+    youtubeId: "hBc1VPpG5xM",
+    date: { month: "MAR", day: "15" },
+    time: "2:00 PM",
     status: "Upcoming",
-    link: "/events/tech-summit",
-  },
-  {
-    id: "event-4",
-    title: "Lagos Music Fest",
-    imageUrl:
-      "https://images.unsplash.com/photo-1535016120754-fd5ac5979814?w=600&h=400&fit=crop",
-    date: { month: "JUL", day: "01" },
-    time: "7:00 PM",
-    status: "Live",
-    link: "/events/music-fest",
+    link: "#",
   },
 ];
 
