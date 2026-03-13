@@ -1,0 +1,19 @@
+<svg width="300" height="400" viewBox="0 0 300 400" xmlns="http://www.w3.org/2000/svg">
+  <rect width="300" height="400" fill="#1a050f"/>
+  <rect width="300" height="400" fill="#2a1520" opacity="0.5"/>
+  
+  <!-- Image icon -->
+  <g transform="translate(75, 140)">
+    <!-- Frame -->
+    <rect x="0" y="0" width="150" height="120" fill="none" stroke="#ed017f" stroke-width="2" rx="4"/>
+    
+    <!-- Mountain/landscape icon -->
+    <circle cx="35" cy="30" r="8" fill="#ed017f"/>
+    <path d="M 30 80 L 65 40 L 90 70 L 150 20" stroke="#ed017f" stroke-width="2.5" fill="none"/>
+  </g>
+  
+  <!-- Text -->
+  <text x="150" y="330" font-family="Arial, sans-serif" font-size="16" fill="#a8a8a8" text-anchor="middle">
+    No Image
+  </text>
+</svg>
