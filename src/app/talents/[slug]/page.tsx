@@ -205,10 +205,31 @@ const mockTalentData: Record<string, TalentProfile> = {
       },
     ],
   },
+  "bill-nelson": {
+    id: "7",
+    slug: "bill-nelson",
+    name: "Bill Nelson",
+    role: "Motion Graphics Designer",
+    bio: "Bill Nelson is a talented motion graphics designer with expertise in visual storytelling and creative design. He brings innovation and technical excellence to every project, creating compelling visual content that engages and inspires audiences.",
+    imageUrl: "/talents/nelson.png",
+    socials: {
+      twitter: "https://twitter.com",
+      instagram: "https://instagram.com",
+      linkedin: "https://linkedin.com",
+    },
+    shows: [
+      {
+        id: "1",
+        title: "Beyond The Headlines",
+        thumbnailUrl: "/FMShows/Beyond The Headlines.png",
+        schedule: "Weekdays",
+      }
+    ],
+  },
 };
 
 // Talent order for "View Next" navigation
-const talentOrder = ["ifeoma", "ayodele", "lilian", "fred", "stanley", "iyobosa"];
+const talentOrder = ["ifeoma", "ayodele", "lilian", "fred", "stanley", "iyobosa", "bill-nelson"];
 
 export default function TalentProfilePage() {
   const params = useParams();
