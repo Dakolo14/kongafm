@@ -64,24 +64,24 @@ const DEFAULT_NEWS_DATA = {
     {
       id: "news-side-3",
       imageUrl:
-        "https://images.unsplash.com/photo-1487180144351-b8472da7d491?w=200&h=200&fit=crop",
-      title: "Afrobeats Grammy Nominations",
+        "https://www.bellanaija.com/wp-content/uploads/2025/08/FEATURED-IMAGE-1.jpeg",
+      title: "LaCreme Crafts honours KONGA103.7FM with Special Resin Art for supporting SMEs",
       description:
-        "A record number of Afrobeats artists have been nominated for this year's Grammy Awards, signaling global dominance.",
-      category: "Awards",
-      date: "January 9, 2026",
-      link: "/news/grammy-noms",
+        "KONGA103.7FM, Lagos’ commerce and hit music station, has once again received accolades for its impactful contributions to the Small and Medium Enterprises (SME) sector.",
+      category: "Events",
+      date: "August 22, 2025",
+      link: "https://www.bellanaija.com/2025/08/lecreme-crafts-honours-konga1037fm/",
     },
     {
       id: "news-side-4",
       imageUrl:
-        "https://images.unsplash.com/photo-1487180144351-b8472da7d491?w=200&h=200&fit=crop",
-      title: "Afrobeats Grammy Nominations",
+        "https://www.bellanaija.com/wp-content/uploads/2025/08/Lilian-Duru-Valentine-Head-Konga-Radio-Ifeoma-Ajumobi-Head-Konga-Communications-and-Princess-Okumagba-Founder-LaCreme-Crafts.png",
+      title: "Fueling SME Growth: KONGA103.7FM Delivers Extensive Media Exposure",
       description:
-        "A record number of Afrobeats artists have been nominated for this year's Grammy Awards, signaling global dominance.",
-      category: "Awards",
-      date: "January 9, 2026",
-      link: "/news/grammy-noms",
+        "In Nigeria’s vibrant but highly competitive business landscape, where small and medium-sized enterprises often struggle to gain visibility, KONGA103.7FM has emerged as a trusted champion for business owners, innovators, and market disruptors.",
+      category: "Promotions",
+      date: "August 21, 2025",
+      link: "https://www.bellanaija.com/2025/08/konga103-7fm/",
     },
   ],
 };
@@ -110,7 +110,7 @@ const NewsGrid: React.FC<NewsGridProps> = ({
           {articles.map((article) => (
             <article key={article.id} className={styles.gridArticle}>
               <a
-                href={article.link || article.slug ? `/updates/${article.slug}` : "#"}
+                href={article.link || (article.slug ? `/updates/${article.slug}` : "#")}
                 className={styles.gridLink}
               >
                 <div className={styles.gridImageWrapper}>

@@ -11,14 +11,14 @@ import styles from "./page.module.scss";
 const ALL_ARTICLES: NewsArticle[] = [
   {
     id: "1",
-    slug: "konga-fm-launches-new-morning-show",
+    slug: "https://www.bellanaija.com/2025/09/konga1037fm-amplifies-tdafrica/",
     category: "News",
-    title: "Konga FM Launches Exciting New Morning Show",
+    title: "Konga103.7FM amplifies TD Africa’s Super App revolution on The Market Square",
     excerpt:
-      "Discover the latest additions to our radio lineup with dynamic hosts and engaging content.",
-    date: "Mar 10, 2026",
+      "Konga103.7FM once again demonstrated its commitment to driving conversations that shape Nigeria’s digital and commercial landscape with an enlightening edition of The Market Square hosted by Lilian Duru-Valentine.",
+    date: "September 12, 2025",
     readTime: "5 mins read",
-    imageUrl: "/morningInspiration.png",
+    imageUrl: "https://www.bellanaija.com/wp-content/uploads/2025/09/TDAFRICA-AT-KONGAFM-STUDIOS-2.jpg",
   },
   {
     id: "2",
@@ -27,9 +27,9 @@ const ALL_ARTICLES: NewsArticle[] = [
     title: "Behind the Scenes: Inside Our State-of-the-Art Studios",
     excerpt:
       "Get an exclusive look at the cutting-edge technology powering Konga Communications.",
-    date: "Mar 8, 2026",
+    date: "September 10, 2025",
     readTime: "4 mins read",
-    imageUrl: "/kongaDeals.png",
+    imageUrl: "https://www.bellanaija.com/wp-content/uploads/2025/09/FEATURED-IMAGE-2-2048x1365.jpeg",
   },
   {
     id: "3",
