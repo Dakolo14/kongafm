@@ -251,9 +251,10 @@ const EVENTS_DATA: EventItem[] = [
 
 // Sell Banner Mock Data
 const SELL_BANNER = {
-  imageUrl:
-    "https://www-konga-com-res.cloudinary.com/image/upload/v1771580245/landingPages/2026%20Marketing/Ramadan03/DESKTOP.png",
-  link: "/promo/featured",
+  mobileImageUrl: "https://www-konga-com-res.cloudinary.com/image/upload/v1772451324/contentservice/Premium%20Banner%203%20%283%29.gif_LffQ9awJz0.gif",
+  mobileLink: "https://www.konga.com/content/konga-berekete",
+  desktopImageUrl: "/promotionalbannerdesktop.png",
+  desktopLink: "https://www.konga.com/deals/daily",
   altText: "Sponsored promotional content",
 };
 
@@ -373,8 +374,10 @@ export default function Home() {
 
       {/* Sell Banner Section */}
       <SellBanner
-        imageUrl={SELL_BANNER.imageUrl}
-        link={SELL_BANNER.link}
+        mobileImageUrl={SELL_BANNER.mobileImageUrl}
+        mobileLink={SELL_BANNER.mobileLink}
+        desktopImageUrl={SELL_BANNER.desktopImageUrl}
+        desktopLink={SELL_BANNER.desktopLink}
         altText={SELL_BANNER.altText}
       />
 
