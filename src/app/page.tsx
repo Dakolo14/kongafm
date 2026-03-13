@@ -5,7 +5,7 @@ import TVShowTimeline from "@/components/TVShowTimeline";
 import NewsGrid from "@/components/NewsGrid";
 import ProductShowcase from "@/components/ProductShowcase";
 import SellBanner from "@/components/SellBanner";
-import BrandPlaylist, { PlaylistData } from "@/components/BrandPlaylist";
+// import BrandPlaylist, { PlaylistData } from "@/components/BrandPlaylist";
 import Events, { EventItem } from "@/components/Events";
 import { ShowCard, ProductItem } from "@/types/components";
 import styles from "./page.module.scss";
@@ -258,37 +258,37 @@ const SELL_BANNER = {
   altText: "Sponsored promotional content",
 };
 
-// Brand Playlist Mock Data
-const BRAND_PLAYLISTS: PlaylistData[] = [
-  {
-    id: "playlist-1",
-    coverImageUrl:
-      "https://images.unsplash.com/photo-1514693828949-786ea6191e13?w=400&h=500&fit=crop",
-    title: "Konga Streaming Series",
-    destinationUrl: "https://youtube.com/playlist?list=konga-streaming",
-  },
-  {
-    id: "playlist-2",
-    coverImageUrl:
-      "https://images.unsplash.com/photo-1487180144351-b8472da7d491?w=400&h=500&fit=crop",
-    title: "Latest Afrobeats Hits",
-    destinationUrl: "https://youtube.com/playlist?list=afrobeats-hits",
-  },
-  {
-    id: "playlist-3",
-    coverImageUrl:
-      "https://images.unsplash.com/photo-1514320291840-2e0a9bf2a9ae?w=400&h=500&fit=crop",
-    title: "Premium Original Content",
-    destinationUrl: "https://youtube.com/playlist?list=premium-content",
-  },
-  {
-    id: "playlist-4",
-    coverImageUrl:
-      "https://images.unsplash.com/photo-1470225620780-dba8ba36b745?w=400&h=500&fit=crop",
-    title: "Music Video Collection",
-    destinationUrl: "https://youtube.com/playlist?list=music-videos",
-  },
-];
+// Brand Playlist Mock Data - Disabled until playlists are available
+// const BRAND_PLAYLISTS: PlaylistData[] = [
+//   {
+//     id: "playlist-1",
+//     coverImageUrl:
+//       "https://images.unsplash.com/photo-1514693828949-786ea6191e13?w=400&h=500&fit=crop",
+//     title: "Konga Streaming Series",
+//     destinationUrl: "https://youtube.com/playlist?list=konga-streaming",
+//   },
+//   {
+//     id: "playlist-2",
+//     coverImageUrl:
+//       "https://images.unsplash.com/photo-1487180144351-b8472da7d491?w=400&h=500&fit=crop",
+//     title: "Latest Afrobeats Hits",
+//     destinationUrl: "https://youtube.com/playlist?list=afrobeats-hits",
+//   },
+//   {
+//     id: "playlist-3",
+//     coverImageUrl:
+//       "https://images.unsplash.com/photo-1514320291840-2e0a9bf2a9ae?w=400&h=500&fit=crop",
+//     title: "Premium Original Content",
+//     destinationUrl: "https://youtube.com/playlist?list=premium-content",
+//   },
+//   {
+//     id: "playlist-4",
+//     coverImageUrl:
+//       "https://images.unsplash.com/photo-1470225620780-dba8ba36b745?w=400&h=500&fit=crop",
+//     title: "Music Video Collection",
+//     destinationUrl: "https://youtube.com/playlist?list=music-videos",
+//   },
+// ];
 
 export default function Home() {
   const bannerSlides = [
@@ -381,12 +381,12 @@ export default function Home() {
         altText={SELL_BANNER.altText}
       />
 
-      {/* Brand Playlist Section */}
-      <BrandPlaylist
+      {/* Brand Playlist Section - Disabled until playlists are available */}
+      {/* <BrandPlaylist
         title="Brand Playlist"
         playlists={BRAND_PLAYLISTS}
         viewAllLink="/playlists"
-      />
+      /> */}
     </main>
   );
 }
