@@ -115,9 +115,8 @@ const TVShowTimeline: React.FC<ShowTimelineProps> = ({
           onScroll={handleScroll}
         >
           {shows.map((show) => (
-            <a
+            <div
               key={show.id}
-              href={show.link || "#"}
               className={styles.showCard}
             >
               <div className={styles.imageContainer}>
@@ -136,7 +135,7 @@ const TVShowTimeline: React.FC<ShowTimelineProps> = ({
                 <h3 className={styles.showName}>{show.showName}</h3>
                 <p className={styles.time}>{show.time}</p>
               </div>
-            </a>
+            </div>
           ))}
         </div>
 
