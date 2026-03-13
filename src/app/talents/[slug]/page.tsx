@@ -319,16 +319,16 @@ export default function TalentProfilePage() {
           <div className={styles.showsGrid}>
             {talent.shows.map((show) => (
               <div key={show.id} className={styles.showCard}>
-                {show.thumbnailUrl && (
-                  <div className={styles.showThumbnail}>
+                <div className={styles.showThumbnail}>
+                  {show.thumbnailUrl && (
                     <Image
                       src={show.thumbnailUrl}
                       alt={show.title}
                       fill
                       style={{ objectFit: "cover" }}
                     />
-                  </div>
-                )}
+                  )}
+                </div>
                 <div className={styles.showInfo}>
                   <h3 className={styles.showTitle}>{show.title}</h3>
                   <p className={styles.showSchedule}>{show.schedule}</p>
