@@ -76,20 +76,9 @@ const PRODUCTS: ProductItem[] = [
 export default function ProductShowcasePage() {
   return (
     <main className={styles.productShowcasePage}>
-      {/* Hero Section */}
-      <section className={styles.hero}>
-        <div className={styles.heroContent}>
-          <h1 className={styles.heroTitle}>Product Showcase Videos</h1>
-          <p className={styles.heroDescription}>
-            Explore our exclusive video collection featuring entertainment, interviews, and behind-the-scenes content from Konga FM.
-          </p>
-        </div>
-      </section>
-
       {/* Product Showcase Grid */}
       <section className={styles.showcaseSection}>
         <ProductShowcase
-          title="All Videos"
           videos={PRODUCTS}
         />
       </section>

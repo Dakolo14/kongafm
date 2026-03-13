@@ -5,7 +5,7 @@ import { ProductItem } from "@/types/components";
 import styles from "./ProductShowcase.module.scss";
 
 export interface ProductShowcaseProps {
-  title: string; // "Product Showcase Videos"
+  title?: string; // "Product Showcase Videos"
   videos: ProductItem[];
   viewAllLink?: string;
 }
@@ -27,14 +27,16 @@ const ProductShowcase: React.FC<ProductShowcaseProps> = ({
   return (
     <section className={styles.productShowcase}>
       {/* 1. Header: Same layout as Timeline */}
-      <div className={styles.header}>
-        <h2 className={styles.title}>{title}</h2>
-        {viewAllLink && (
-          <a href={viewAllLink} className={styles.viewAll}>
-            View All
-          </a>
-        )}
-      </div>
+      {title && (
+        <div className={styles.header}>
+          <h2 className={styles.title}>{title}</h2>
+          {viewAllLink && (
+            <a href={viewAllLink} className={styles.viewAll}>
+              View All
+            </a>
+          )}
+        </div>
+      )}
 
       {/* Grid / Slider Container */}
       <div className={styles.container}>
