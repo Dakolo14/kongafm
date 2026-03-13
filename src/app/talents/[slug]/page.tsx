@@ -74,7 +74,7 @@ const mockTalentData: Record<string, TalentProfile> = {
       {
         id: "1",
         title: "Beyond The Headlines",
-        thumbnailUrl: "/FMShows/Beyond The Headlines.png",
+        thumbnailUrl: "/FMShows/Beyond the headlines.png",
         schedule: "Weekdays",
       },
       {
@@ -134,7 +134,7 @@ const mockTalentData: Record<string, TalentProfile> = {
       {
         id: "2",
         title: "Creators Corner",
-        thumbnailUrl: "/FMShows/Creators Corner.png",
+        thumbnailUrl: "/FMShows/Creators corner.png",
         schedule: "Weekly",
       },
       {
