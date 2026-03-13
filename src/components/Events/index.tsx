@@ -85,7 +85,7 @@ const Events: React.FC<EventsProps> = ({ title, events, viewAllLink }) => {
               <div
                 className={`${styles.statusBadge} ${styles[event.status.toLowerCase()]}`}
               >
-                {event.status === "Free" ? "FREE ENTRY" : event.status}
+                {event.status === "Free" ? "FREE ENTRY" : event.status === "Past" ? "PAST EVENT" : event.status}
               </div>
             </div>
 

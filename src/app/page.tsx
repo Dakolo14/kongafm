@@ -205,15 +205,15 @@ const PRODUCTS: ProductItem[] = [
   },
 ];
 
-// Events Data - YouTube Videos with Event Design
+// Events Data - YouTube Videos with Event Design (Past Events)
 const EVENTS_DATA: EventItem[] = [
   {
     id: "event-1",
     title: "Konga FM & KTV Highlights",
     youtubeId: "EW7hynK33ec",
     date: { month: "MAR", day: "13" },
-    time: "Live Now",
-    status: "Live",
+    time: "Full Episode",
+    status: "Past",
     link: "#",
   },
   {
@@ -221,8 +221,8 @@ const EVENTS_DATA: EventItem[] = [
     title: "Entertainment Coverage",
     youtubeId: "sSgBgV9YA3I",
     date: { month: "MAR", day: "14" },
-    time: "10:00 AM",
-    status: "Upcoming",
+    time: "Full Episode",
+    status: "Past",
     link: "#",
   },
   {
@@ -230,8 +230,8 @@ const EVENTS_DATA: EventItem[] = [
     title: "Studio Sessions & Behind the Scenes",
     youtubeId: "hBc1VPpG5xM",
     date: { month: "MAR", day: "15" },
-    time: "2:00 PM",
-    status: "Upcoming",
+    time: "Full Episode",
+    status: "Past",
     link: "#",
   },
 ];
