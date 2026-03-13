@@ -29,6 +29,15 @@ const EVENTS_DATA: EventItem[] = [
     link: "#",
   },
   {
+    id: "event-5",
+    title: "L'Oreal Event",
+    youtubeId: "qE3cXZNF19M",
+    date: { month: "MAR", day: "17" },
+    time: "Full Episode",
+    status: "Past",
+    link: "#",
+  },
+  {
     id: "event-3",
     title: "Leo Stan Ekeh on Corporate Tithe, Technology & Why Wealth Whispers",
     youtubeId: "hBc1VPpG5xM",
@@ -42,15 +51,6 @@ const EVENTS_DATA: EventItem[] = [
     title: "Creation Africa",
     youtubeId: "qvFkPGr1ZAU",
     date: { month: "MAR", day: "16" },
-    time: "Full Episode",
-    status: "Past",
-    link: "#",
-  },
-  {
-    id: "event-5",
-    title: "L'Oreal Event",
-    youtubeId: "qE3cXZNF19M",
-    date: { month: "MAR", day: "17" },
     time: "Full Episode",
     status: "Past",
     link: "#",
@@ -75,6 +75,7 @@ export default function EventsPage() {
         <Events
           title=""
           events={EVENTS_DATA}
+          limit={6}
         />
       </section>
     </main>

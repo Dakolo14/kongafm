@@ -21,11 +21,12 @@ export interface EventsProps {
   title: string;
   events: EventItem[];
   viewAllLink?: string;
+  limit?: number; // Optional limit for homepage (defaults to 3)
 }
 
-const Events: React.FC<EventsProps> = ({ title, events, viewAllLink }) => {
-  // Limit to first 3 events for the homepage preview
-  const displayedEvents = events.slice(0, 3);
+const Events: React.FC<EventsProps> = ({ title, events, viewAllLink, limit = 3 }) => {
+  // Limit events based on prop (3 for homepage, all for dedicated page)
+  const displayedEvents = events.slice(0, limit);
   const [selectedVideo, setSelectedVideo] = useState<string | null>(null);
 
   const handleVideoClick = (e: React.MouseEvent<HTMLAnchorElement>, youtubeId?: string) => {
