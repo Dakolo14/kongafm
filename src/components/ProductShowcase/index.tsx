@@ -1,6 +1,6 @@
 "use client";
 
-import React from "react";
+import React, { useState } from "react";
 import { ProductItem } from "@/types/components";
 import styles from "./ProductShowcase.module.scss";
 
@@ -15,6 +15,15 @@ const ProductShowcase: React.FC<ProductShowcaseProps> = ({
   videos,
   viewAllLink,
 }) => {
+  const [selectedVideo, setSelectedVideo] = useState<string | null>(null);
+
+  const handleVideoClick = (e: React.MouseEvent<HTMLAnchorElement>, youtubeId?: string) => {
+    if (youtubeId) {
+      e.preventDefault();
+      setSelectedVideo(youtubeId);
+    }
+  };
+
   return (
     <section className={styles.productShowcase}>
       {/* 1. Header: Same layout as Timeline */}
@@ -33,6 +42,7 @@ const ProductShowcase: React.FC<ProductShowcaseProps> = ({
           <a
             key={video.id}
             href={video.link || "#"}
+            onClick={(e) => handleVideoClick(e, video.youtubeId)}
             className={styles.card}
             aria-label={`Watch ${video.title}`}
           >
@@ -70,6 +80,32 @@ const ProductShowcase: React.FC<ProductShowcaseProps> = ({
           </a>
         ))}
       </div>
+
+      {/* YouTube Modal */}
+      {selectedVideo && (
+        <div className={styles.modal} onClick={() => setSelectedVideo(null)}>
+          <div className={styles.modalContent} onClick={(e) => e.stopPropagation()}>
+            <button
+              className={styles.closeButton}
+              onClick={() => setSelectedVideo(null)}
+              aria-label="Close video"
+            >
+              ✕
+            </button>
+            <div className={styles.iframeWrapper}>
+              <iframe
+                width="100%"
+                height="100%"
+                src={`https://www.youtube.com/embed/${selectedVideo}?autoplay=1&modestbranding=1`}
+                title="YouTube video"
+                frameBorder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+              />
+            </div>
+          </div>
+        </div>
+      )}
     </section>
   );
 };

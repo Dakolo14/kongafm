@@ -37,6 +37,7 @@ export interface ProductItem {
   playIcon?: boolean;
   badge?: string;
   duration?: string; // For videos - e.g., "2:45"
+  youtubeId?: string; // YouTube video ID for embedded videos
 }
 
 export interface ProductShowcaseProps {
