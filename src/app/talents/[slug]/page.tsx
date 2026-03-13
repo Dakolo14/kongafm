@@ -41,7 +41,7 @@ const mockTalentData: Record<string, TalentProfile> = {
       {
         id: "1",
         title: "The Scoop",
-        thumbnailUrl: "",
+        thumbnailUrl: "/TVShows/KTV - Scoop.png",
         schedule: "Weekdays",
       },
       {
@@ -319,6 +319,16 @@ export default function TalentProfilePage() {
           <div className={styles.showsGrid}>
             {talent.shows.map((show) => (
               <div key={show.id} className={styles.showCard}>
+                {show.thumbnailUrl && (
+                  <div className={styles.showThumbnail}>
+                    <Image
+                      src={show.thumbnailUrl}
+                      alt={show.title}
+                      fill
+                      style={{ objectFit: "cover" }}
+                    />
+                  </div>
+                )}
                 <div className={styles.showInfo}>
                   <h3 className={styles.showTitle}>{show.title}</h3>
                   <p className={styles.showSchedule}>{show.schedule}</p>
