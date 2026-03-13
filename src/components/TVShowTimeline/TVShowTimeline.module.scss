@@ -124,7 +124,7 @@
     transition:
       transform 0.3s ease,
       box-shadow 0.3s ease;
-    cursor: pointer;
+    cursor: default;
 
     @media (min-width: 1025px) {
       min-width: unset;
