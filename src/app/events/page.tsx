@@ -12,7 +12,7 @@ export const metadata: Metadata = {
 const EVENTS_DATA: EventItem[] = [
   {
     id: "event-1",
-    title: "Konga FM & KTV Highlights",
+    title: "TD Africa & Zinox Technologies partner to take Tech Impact to another height.",
     youtubeId: "EW7hynK33ec",
     date: { month: "MAR", day: "13" },
     time: "Full Episode",
@@ -21,7 +21,7 @@ const EVENTS_DATA: EventItem[] = [
   },
   {
     id: "event-2",
-    title: "Entertainment Coverage",
+    title: "KONGA CELEBRATES HIGHWAY CLEANERS ON INTERNATIONAL WOMEN'S DAY",
     youtubeId: "sSgBgV9YA3I",
     date: { month: "MAR", day: "14" },
     time: "Full Episode",
@@ -30,7 +30,7 @@ const EVENTS_DATA: EventItem[] = [
   },
   {
     id: "event-3",
-    title: "Studio Sessions & Behind the Scenes",
+    title: "Leo Stan Ekeh on Corporate Tithe, Technology & Why Wealth Whispers",
     youtubeId: "hBc1VPpG5xM",
     date: { month: "MAR", day: "15" },
     time: "Full Episode",

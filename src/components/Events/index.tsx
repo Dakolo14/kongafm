@@ -38,7 +38,7 @@ const Events: React.FC<EventsProps> = ({ title, events, viewAllLink }) => {
   // Get image URL - either from imageUrl or generate from youtubeId
   const getImageUrl = (event: EventItem) => {
     if (event.imageUrl) return event.imageUrl;
-    if (event.youtubeId) return `https://img.youtube.com/vi/${event.youtubeId}/maxresdefault.jpg`;
+    if (event.youtubeId) return `https://img.youtube.com/vi/${event.youtubeId}/hqdefault.jpg`;
     return "";
   };
 
