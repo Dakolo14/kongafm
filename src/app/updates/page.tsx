@@ -11,14 +11,15 @@ import styles from "./page.module.scss";
 const ALL_ARTICLES: NewsArticle[] = [
   {
     id: "1",
-    slug: "https://www.bellanaija.com/2025/09/konga1037fm-amplifies-tdafrica/",
+    slug: "td-africa-super-app",
     category: "News",
-    title: "Konga103.7FM amplifies TD Africa’s Super App revolution on The Market Square",
+    title: "Konga103.7FM amplifies TD Africa's Super App revolution on The Market Square",
     excerpt:
-      "Konga103.7FM once again demonstrated its commitment to driving conversations that shape Nigeria’s digital and commercial landscape with an enlightening edition of The Market Square hosted by Lilian Duru-Valentine.",
+      "Konga103.7FM once again demonstrated its commitment to driving conversations that shape Nigeria's digital and commercial landscape with an enlightening edition of The Market Square hosted by Lilian Duru-Valentine.",
     date: "September 12, 2025",
     readTime: "5 mins read",
     imageUrl: "https://www.bellanaija.com/wp-content/uploads/2025/09/TDAFRICA-AT-KONGAFM-STUDIOS-2.jpg",
+    link: "https://www.bellanaija.com/2025/09/konga1037fm-amplifies-tdafrica/",
   },
   {
     id: "2",
@@ -30,6 +31,7 @@ const ALL_ARTICLES: NewsArticle[] = [
     date: "September 10, 2025",
     readTime: "4 mins read",
     imageUrl: "https://www.bellanaija.com/wp-content/uploads/2025/09/FEATURED-IMAGE-2-2048x1365.jpeg",
+    link: "https://www.bellanaija.com/2025/09/zinox-kongacares-launch/",
   },
   {
     id: "3",

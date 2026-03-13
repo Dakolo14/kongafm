@@ -110,7 +110,14 @@ const NewsGrid: React.FC<NewsGridProps> = ({
           {articles.map((article) => (
             <article key={article.id} className={styles.gridArticle}>
               <a
-                href={article.link || (article.slug ? `/updates/${article.slug}` : "#")}
+                href={
+                  article.link ||
+                  (article.slug && article.slug.startsWith("http")
+                    ? article.slug
+                    : article.slug
+                    ? `/updates/${article.slug}`
+                    : "#")
+                }
                 className={styles.gridLink}
               >
                 <div className={styles.gridImageWrapper}>
