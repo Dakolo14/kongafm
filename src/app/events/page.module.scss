@@ -1,0 +1,96 @@
+.eventsPage {
+  min-height: 100vh;
+  background-color: #26010f;
+}
+
+.hero {
+  padding: 80px 40px;
+  background: linear-gradient(135deg, #26010f 0%, #3a0a1a 100%);
+  border-bottom: 1px solid rgba(237, 1, 127, 0.1);
+
+  @media (min-width: 1441px) {
+    padding: 100px 60px;
+  }
+
+  @media (min-width: 1920px) {
+    padding: 120px 80px;
+  }
+
+  @media (min-width: 2560px) {
+    padding: 140px 100px;
+  }
+
+  @media (max-width: 1024px) {
+    padding: 60px 30px;
+  }
+
+  @media (max-width: 768px) {
+    padding: 40px 20px;
+  }
+}
+
+.heroContent {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.heroTitle {
+  font-size: 48px;
+  font-weight: 800;
+  color: #ffffff;
+  margin: 0 0 16px 0;
+  line-height: 1.2;
+  letter-spacing: -0.5px;
+
+  @media (max-width: 1024px) {
+    font-size: 40px;
+  }
+
+  @media (max-width: 768px) {
+    font-size: 32px;
+  }
+
+  @media (max-width: 480px) {
+    font-size: 24px;
+  }
+}
+
+.heroDescription {
+  font-size: 18px;
+  color: rgba(255, 255, 255, 0.8);
+  margin: 0;
+  line-height: 1.6;
+
+  @media (max-width: 768px) {
+    font-size: 16px;
+  }
+
+  @media (max-width: 480px) {
+    font-size: 14px;
+  }
+}
+
+.eventsSection {
+  padding: 20px 40px 60px 40px;
+  background-color: #26010f;
+
+  @media (min-width: 1441px) {
+    padding: 40px 60px 80px 60px;
+  }
+
+  @media (min-width: 1920px) {
+    padding: 60px 80px 100px 80px;
+  }
+
+  @media (min-width: 2560px) {
+    padding: 80px 100px 120px 100px;
+  }
+
+  @media (max-width: 1024px) {
+    padding: 30px 30px 50px 30px;
+  }
+
+  @media (max-width: 768px) {
+    padding: 20px 20px 40px 20px;
+  }
+}
