@@ -20,14 +20,14 @@ const TV_SHOWS: ShowCard[] = [
     id: "tv-1",
     imageUrl: "/TVShows/KTV - Scoop.png",
     showName: "SCOOP",
-    time: "7:00 - 8:00 PM",
+    time: "",
     link: "/tv/scoop",
   },
   {
     id: "tv-2",
     imageUrl: "/TVShows/Reason This.png",
     showName: "REASON THIS",
-    time: "8:00 - 9:00 PM",
+    time: "",
     link: "/tv/reason-this",
   },
 ];
