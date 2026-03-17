@@ -94,7 +94,7 @@ const FM_SHOWS: ShowCard[] = [
 const FM_SHOW_DETAILS = [
   {
     id: "fm-1",
-    imageUrl: "/FMShows/Morning Inspiration.png",
+    imageUrl: "/FMShows/Morning inspiration.png",
     showName: "MORNING INSPIRATION",
     hostName: "Daily",
     time: "5:00am - 7:00am",

@@ -28,7 +28,7 @@ export const metadata: Metadata = {
 const FM_SHOWS: ShowCard[] = [
   {
     id: "fm-1",
-    imageUrl: "/FMShows/Morning Inspiration.png",
+    imageUrl: "/FMShows/Morning inspiration.png",
     showName: "MORNING INSPIRATION",
     time: "5:00am - 7:00am",
     link: "/shows/morning-inspiration",
