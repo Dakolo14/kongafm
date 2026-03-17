@@ -3,7 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useParams } from "next/navigation";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import styles from "./style.module.scss";
 
 interface Show {
@@ -235,7 +235,7 @@ const talentOrder = ["ifeoma", "ayodele", "lilian", "fred", "stanley", "iyobosa"
 export default function TalentProfilePage() {
   const params = useParams();
   const slug = params.slug as string;
-  const [showCopiedToast, setShowCopiedToast] = useState(false);
+  const [copiedLinkedin, setCopiedLinkedin] = useState(false);
 
   const talent = mockTalentData[slug] || mockTalentData.ifeoma;
 
@@ -250,17 +250,26 @@ export default function TalentProfilePage() {
   
   const facebookShareUrl = `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(pageUrl)}`;
   const twitterShareUrl = `https://twitter.com/intent/tweet?url=${encodeURIComponent(pageUrl)}&text=Check%20out%20${encodeURIComponent(talent.name)}%20on%20Konga%20Communications`;
-  
+
   // Handle LinkedIn copy to clipboard
-  const handleLinkedInCopy = async () => {
+  const handleLinkedinShare = async () => {
     try {
       await navigator.clipboard.writeText(pageUrl);
-      setShowCopiedToast(true);
-      setTimeout(() => setShowCopiedToast(false), 3000);
+      setCopiedLinkedin(true);
+      // Auto-hide toast after 2 seconds
+      setTimeout(() => setCopiedLinkedin(false), 2000);
     } catch (err) {
-      console.error("Failed to copy:", err);
+      console.error("Failed to copy to clipboard:", err);
     }
   };
+
+  // Auto-hide copied notification
+  useEffect(() => {
+    if (copiedLinkedin) {
+      const timer = setTimeout(() => setCopiedLinkedin(false), 2000);
+      return () => clearTimeout(timer);
+    }
+  }, [copiedLinkedin]);
 
   return (
     <main className={styles.talentProfilePage}>
@@ -330,25 +339,26 @@ export default function TalentProfilePage() {
                 >
                   𝕏
                 </a>
-                <button
-                  onClick={handleLinkedInCopy}
+                <a
+                  onClick={handleLinkedinShare}
                   className={styles.socialIcon}
                   title="Copy link to share on LinkedIn"
+                  style={{ cursor: "pointer" }}
                 >
                   in
-                </button>
+                </a>
               </div>
             </div>
+
+            {/* Toast Notification */}
+            {copiedLinkedin && (
+              <div className={styles.toast}>
+                <p>Link copied to clipboard!</p>
+              </div>
+            )}
           </div>
         </div>
       </section>
-
-      {/* Toast Notification */}
-      {showCopiedToast && (
-        <div className={styles.toast}>
-          ✓ Link copied to clipboard!
-        </div>
-      )}
 
       {/* Shows Section */}
       {talent.shows && talent.shows.length > 0 && (
