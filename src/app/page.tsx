@@ -28,39 +28,60 @@ export const metadata: Metadata = {
 const FM_SHOWS: ShowCard[] = [
   {
     id: "fm-1",
+    imageUrl: "/FMShows/Morning Inspiration.png",
+    showName: "MORNING INSPIRATION",
+    time: "6:00am - 7:00am",
+    link: "/shows/morning-inspiration",
+  },
+  {
+    id: "fm-2",
+    imageUrl: "/FMShows/Market Square.png",
+    showName: "MARKET SQUARE",
+    time: "7:00am - 8:00am",
+    link: "/shows/market-square",
+  },
+  {
+    id: "fm-3",
     imageUrl: "/FMShows/Beyond the headlines.png",
     showName: "BEYOND THE HEADLINES",
     time: "8:00am - 8:30am",
     link: "/shows/beyond-headlines",
   },
   {
-    id: "fm-2",
+    id: "fm-4",
     imageUrl: "/FMShows/Creators corner.png",
     showName: "CREATORS CORNER",
     time: "9:00am - 10:00am",
     link: "/shows/creators-corner",
   },
   {
-    id: "fm-3",
+    id: "fm-5",
     imageUrl: "/FMShows/Cruise Control.png",
     showName: "CRUISE CONTROL",
     time: "12:00pm - 1:00pm",
     link: "/shows/cruise-control",
   },
   {
-    id: "fm-4",
+    id: "fm-6",
     imageUrl: "/FMShows/Shop on radio.png",
     showName: "SHOP ON RADIO",
     time: "4:00pm - 5:00pm",
     link: "/shows/shop-on-radio",
   },
   {
-    id: "fm-5",
+    id: "fm-7",
     imageUrl: "/FMShows/The SCoop.png",
     showName: "THE SCOOP",
     time: "6:00pm - 7:00pm",
     badge: "POPULAR",
     link: "/shows/the-scoop",
+  },
+  {
+    id: "fm-8",
+    imageUrl: "/FMShows/Church on radio.png",
+    showName: "CHURCH ON RADIO",
+    time: "7:00pm - 8:00pm",
+    link: "/shows/church-on-radio",
   },
 ];
 
@@ -356,6 +377,7 @@ export default function Home() {
         shows={FM_SHOWS}
         viewAllLink="/fm"
         variant="fm"
+        limit={6}
       />
 
       {/* TV Show Timeline Section */}

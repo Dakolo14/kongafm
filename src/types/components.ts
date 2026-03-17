@@ -17,6 +17,7 @@ export interface ShowTimelineProps {
   shows: ShowCard[];
   viewAllLink?: string;
   variant?: "fm" | "tv";
+  limit?: number;
 }
 
 // ============================================

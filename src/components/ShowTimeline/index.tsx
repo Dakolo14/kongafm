@@ -10,11 +10,15 @@ const ShowTimeline: React.FC<ShowTimelineProps> = ({
   shows,
   viewAllLink,
   variant = "fm",
+  limit,
 }) => {
   const scrollContainerRef = useRef<HTMLDivElement>(null);
   const [showLeftArrow, setShowLeftArrow] = useState(false);
   const [showRightArrow, setShowRightArrow] = useState(true);
   const [liveShows, setLiveShows] = useState<Record<string, boolean>>({});
+
+  // Apply limit if provided
+  const displayShows = limit ? shows.slice(0, limit) : shows;
 
   const scroll = (direction: "left" | "right") => {
     if (scrollContainerRef.current) {
@@ -59,7 +63,7 @@ const ShowTimeline: React.FC<ShowTimelineProps> = ({
   useEffect(() => {
     const checkLiveStatus = () => {
       const updatedLiveStatus: Record<string, boolean> = {};
-      shows.forEach((show) => {
+      displayShows.forEach((show) => {
         updatedLiveStatus[show.id] = isShowLive(show.time);
       });
       setLiveShows(updatedLiveStatus);
@@ -71,7 +75,7 @@ const ShowTimeline: React.FC<ShowTimelineProps> = ({
     // Update every minute
     const interval = setInterval(checkLiveStatus, 60000);
     return () => clearInterval(interval);
-  }, [shows]);
+  }, [displayShows]);
 
   return (
     <section className={styles.showTimeline}>
@@ -114,7 +118,7 @@ const ShowTimeline: React.FC<ShowTimelineProps> = ({
           ref={scrollContainerRef}
           onScroll={handleScroll}
         >
-          {shows.map((show) => (
+          {displayShows.map((show) => (
             <div
               key={show.id}
               className={styles.showCard}

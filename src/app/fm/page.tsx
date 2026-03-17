@@ -16,56 +16,70 @@ export const metadata: Metadata = {
 // Current/Featured FM Show
 const CURRENT_SHOW = {
   id: "fm-current",
-  imageUrl: "/FMShows/AM Breif.png",
-  showTitle: "AM BRIEF",
+  imageUrl: "/FMShows/Morning Inspiration.png",
+  showTitle: "MORNING INSPIRATION",
   hostName: "Daily",
-  time: "5:00am - 7:00am",
+  time: "6:00am - 7:00am",
 };
 
 // FM Shows Mock Data (for Show Timeline below)
 const FM_SHOWS: ShowCard[] = [
   {
     id: "fm-1",
-    imageUrl: "/FMShows/AM Breif.png",
-    showName: "AM BRIEF",
-    time: "5:00am - 7:00am",
-    link: "/shows/am-brief",
+    imageUrl: "/FMShows/Morning Inspiration.png",
+    showName: "MORNING INSPIRATION",
+    time: "6:00am - 7:00am",
+    link: "/shows/morning-inspiration",
   },
   {
     id: "fm-2",
+    imageUrl: "/FMShows/Market Square.png",
+    showName: "MARKET SQUARE",
+    time: "7:00am - 8:00am",
+    link: "/shows/market-square",
+  },
+  {
+    id: "fm-3",
     imageUrl: "/FMShows/Beyond the headlines.png",
     showName: "BEYOND THE HEADLINES",
     time: "8:00am - 8:30am",
     link: "/shows/beyond-headlines",
   },
   {
-    id: "fm-3",
+    id: "fm-4",
     imageUrl: "/FMShows/Creators corner.png",
     showName: "CREATORS CORNER",
     time: "9:00am - 10:00am",
     link: "/shows/creators-corner",
   },
   {
-    id: "fm-4",
+    id: "fm-5",
     imageUrl: "/FMShows/Cruise Control.png",
     showName: "CRUISE CONTROL",
     time: "12:00pm - 1:00pm",
     link: "/shows/cruise-control",
   },
   {
-    id: "fm-5",
+    id: "fm-6",
     imageUrl: "/FMShows/Shop on radio.png",
     showName: "SHOP ON RADIO",
     time: "4:00pm - 5:00pm",
     link: "/shows/shop-on-radio",
   },
   {
-    id: "fm-6",
+    id: "fm-7",
     imageUrl: "/FMShows/The SCoop.png",
     showName: "THE SCOOP",
     time: "6:00pm - 7:00pm",
     badge: "POPULAR",
     link: "/shows/the-scoop",
+  },
+  {
+    id: "fm-8",
+    imageUrl: "/FMShows/Church on radio.png",
+    showName: "CHURCH ON RADIO",
+    time: "7:00pm - 8:00pm",
+    link: "/shows/church-on-radio",
   },
 ];
 
@@ -73,14 +87,22 @@ const FM_SHOWS: ShowCard[] = [
 const FM_SHOW_DETAILS = [
   {
     id: "fm-1",
-    imageUrl: "/FMShows/AM Breif.png",
-    showName: "AM BRIEF",
+    imageUrl: "/FMShows/Morning Inspiration.png",
+    showName: "MORNING INSPIRATION",
     hostName: "Daily",
-    time: "5:00am - 7:00am",
-    description: "Start your morning with AM Brief, the essential show that keeps you informed and motivated. Get the latest news, trending topics, inspirational stories, and the best music to energize your day.",
+    time: "6:00am - 7:00am",
+    description: "Begin your day with spiritual and motivational content that uplifts your spirit. Morning Inspiration brings together faith-based messages, motivational stories, and uplifting music to inspire your day.",
   },
   {
     id: "fm-2",
+    imageUrl: "/FMShows/Market Square.png",
+    showName: "MARKET SQUARE",
+    hostName: "Daily",
+    time: "7:00am - 8:00am",
+    description: "Your gateway to business, commerce, and lifestyle news. Market Square covers the pulse of Nigeria's economy, entrepreneurship stories, and practical tips for success in business and personal development.",
+  },
+  {
+    id: "fm-3",
     imageUrl: "/FMShows/Beyond the headlines.png",
     showName: "BEYOND THE HEADLINES",
     hostName: "Daily",
@@ -88,7 +110,7 @@ const FM_SHOW_DETAILS = [
     description: "A news and current affairs show that goes deeper than the headlines. We break down major stories in Nigeria and around the world, explaining the facts, the background, and why they matter.",
   },
   {
-    id: "fm-3",
+    id: "fm-4",
     imageUrl: "/FMShows/Creators corner.png",
     showName: "CREATORS CORNER",
     hostName: "Daily",
@@ -96,15 +118,15 @@ const FM_SHOW_DETAILS = [
     description: "A showcase of Nigeria's creative minds—from content creators and influencers to digital entrepreneurs. We celebrate their journeys, their work, and the impact they're making in the digital space.",
   },
   {
-    id: "fm-4",
+    id: "fm-5",
     imageUrl: "/FMShows/Cruise Control.png",
     showName: "CRUISE CONTROL",
     hostName: "Daily",
     time: "12:00pm - 1:00pm",
-    description: "Your perfect drive-home companion with a soundtrack of the best music, entertainment, and conversations to ease you out of the day and transition into your evening.",
+    description: "Your perfect drive companion with a soundtrack of the best music, entertainment, and conversations to keep you energized, informed, and entertained throughout your day.",
   },
   {
-    id: "fm-5",
+    id: "fm-6",
     imageUrl: "/FMShows/Shop on radio.png",
     showName: "SHOP ON RADIO",
     hostName: "Daily",
@@ -112,12 +134,20 @@ const FM_SHOW_DETAILS = [
     description: "A lively show where you can discover great products and buy them right from your radio. From fashion and home items to gadgets and food, vendors showcase their goods live while listeners call in to order and enjoy exclusive deals.",
   },
   {
-    id: "fm-6",
+    id: "fm-7",
     imageUrl: "/FMShows/The SCoop.png",
     showName: "THE SCOOP",
     hostName: "Daily",
     time: "6:00pm - 7:00pm",
     description: "An inspiring profile show that tells the stories of Nigerians and global figures who have made a positive mark in their careers and communities. From their beginnings to their big breaks, we explore their journeys, challenges, and achievements.",
+  },
+  {
+    id: "fm-8",
+    imageUrl: "/FMShows/Church on radio.png",
+    showName: "CHURCH ON RADIO",
+    hostName: "Daily",
+    time: "7:00pm - 8:00pm",
+    description: "A faith-based show bringing spiritual guidance, inspirational messages, and community contributions. Church On Radio connects listeners to their faith and creates a space for spiritual growth and fellowship.",
   },
 ];
 
