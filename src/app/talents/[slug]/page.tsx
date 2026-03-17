@@ -3,6 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useParams } from "next/navigation";
+import { useState } from "react";
 import styles from "./style.module.scss";
 
 interface Show {
@@ -101,13 +102,13 @@ const mockTalentData: Record<string, TalentProfile> = {
       {
         id: "1",
         title: "Morning Inspiration",
-        thumbnailUrl: "",
+        thumbnailUrl: "/FMShows/Morning Inspiration.png",
         schedule: "Weekdays",
       },
       {
         id: "2",
         title: "The Market Square",
-        thumbnailUrl: "",
+        thumbnailUrl: "/FMShows/Market Square.png",
         schedule: "Weekly",
       },
     ],
@@ -172,7 +173,7 @@ const mockTalentData: Record<string, TalentProfile> = {
     name: "Iyobosa Victory Osahon",
     role: "Radio Host & Entertainment Expert",
     bio: "Iyobosa Victory Osahon is a talented broadcast professional known for her engaging presentation and expertise in lifestyle, entertainment, and music programming. She brings energy and authenticity to every show she hosts.",
-    imageUrl: "/talents/iyobosa.png",
+    imageUrl: "/talents/Vicsolute.jpeg",
     socials: {
       twitter: "https://twitter.com",
       instagram: "https://instagram.com",
@@ -234,6 +235,7 @@ const talentOrder = ["ifeoma", "ayodele", "lilian", "fred", "stanley", "iyobosa"
 export default function TalentProfilePage() {
   const params = useParams();
   const slug = params.slug as string;
+  const [showCopiedToast, setShowCopiedToast] = useState(false);
 
   const talent = mockTalentData[slug] || mockTalentData.ifeoma;
 
@@ -242,6 +244,23 @@ export default function TalentProfilePage() {
   const nextIndex = (currentIndex + 1) % talentOrder.length;
   const nextSlug = talentOrder[nextIndex];
   const nextTalent = mockTalentData[nextSlug];
+
+  // Generate share URLs
+  const pageUrl = `https://kongacommunications.com/talents/${slug}`;
+  
+  const facebookShareUrl = `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(pageUrl)}`;
+  const twitterShareUrl = `https://twitter.com/intent/tweet?url=${encodeURIComponent(pageUrl)}&text=Check%20out%20${encodeURIComponent(talent.name)}%20on%20Konga%20Communications`;
+  
+  // Handle LinkedIn copy to clipboard
+  const handleLinkedInCopy = async () => {
+    try {
+      await navigator.clipboard.writeText(pageUrl);
+      setShowCopiedToast(true);
+      setTimeout(() => setShowCopiedToast(false), 3000);
+    } catch (err) {
+      console.error("Failed to copy:", err);
+    }
+  };
 
   return (
     <main className={styles.talentProfilePage}>
@@ -293,44 +312,43 @@ export default function TalentProfilePage() {
             <div className={styles.shareSection}>
               <p className={styles.shareTitle}>Share with your community!</p>
               <div className={styles.socialLinks}>
-                {talent.socials.twitter && (
-                  <a
-                    href={talent.socials.twitter}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className={styles.socialIcon}
-                    title="Facebook"
-                  >
-                    f
-                  </a>
-                )}
-                {talent.socials.instagram && (
-                  <a
-                    href={talent.socials.instagram}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className={styles.socialIcon}
-                    title="Twitter"
-                  >
-                    𝕏
-                  </a>
-                )}
-                {talent.socials.linkedin && (
-                  <a
-                    href={talent.socials.linkedin}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className={styles.socialIcon}
-                    title="LinkedIn"
-                  >
-                    in
-                  </a>
-                )}
+                <a
+                  href={facebookShareUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={styles.socialIcon}
+                  title="Share on Facebook"
+                >
+                  f
+                </a>
+                <a
+                  href={twitterShareUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={styles.socialIcon}
+                  title="Share on X (Twitter)"
+                >
+                  𝕏
+                </a>
+                <button
+                  onClick={handleLinkedInCopy}
+                  className={styles.socialIcon}
+                  title="Copy link to share on LinkedIn"
+                >
+                  in
+                </button>
               </div>
             </div>
           </div>
         </div>
       </section>
+
+      {/* Toast Notification */}
+      {showCopiedToast && (
+        <div className={styles.toast}>
+          ✓ Link copied to clipboard!
+        </div>
+      )}
 
       {/* Shows Section */}
       {talent.shows && talent.shows.length > 0 && (

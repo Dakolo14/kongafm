@@ -75,7 +75,7 @@ const ShowTimeline: React.FC<ShowTimelineProps> = ({
     // Update every minute
     const interval = setInterval(checkLiveStatus, 60000);
     return () => clearInterval(interval);
-  }, [displayShows]);
+  }, [shows, limit]);
 
   return (
     <section className={styles.showTimeline}>
